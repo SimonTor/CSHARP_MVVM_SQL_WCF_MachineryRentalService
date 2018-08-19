@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="86ffc54c-6733-4966-9b94-7cf500276bc1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="76715669-6460-407d-9219-e05d815b967f" name="Contracts">
+      <references>
+        <reference Id="34d033d3-b491-4698-a01d-bfc894b45507" name="Logging.Contracts">
+          <ArtifactNode Label="Logging.Contracts" Category="CodeSchema_Project" Id="(Assembly=../../CrossCutting/Logging.Contracts/Logging.Contracts.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Logging.Contracts)" Label="Logging.Contracts.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="68a00188-5f18-4d06-9525-6545789ee2fc" name="Mietmaterialdatenbankzugriffsschicht.Contracts">
+          <ArtifactNode Label="Mietmaterialdatenbankzugriffsschicht.Contracts" Category="CodeSchema_Project" Id="(Assembly=../L2_Datenzugriffsschicht/Mietmaterialdatenbankzugriffsschicht.Contracts/Mietmaterialdatenbankzugriffsschicht.Contracts.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Mietmaterialdatenbankzugriffsschicht.Contracts)" Label="Mietmaterialdatenbankzugriffsschicht.Contracts.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="34466479-3a72-4a8a-8859-0b195e2c11c6" name="Logikschicht.Contracts">
+          <ArtifactNode Label="Logikschicht.Contracts" Category="CodeSchema_Project" Id="(Assembly=../L3_Logikschicht/Logikschicht.Contracts/Logikschicht.Contracts.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Logikschicht.Contracts)" Label="Logikschicht.Contracts.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="e082c337-fd45-42df-9cca-8ac6202f2338" name="Dienste.Contracts">
+          <ArtifactNode Label="Dienste.Contracts" Category="CodeSchema_Project" Id="(Assembly=../L4_Dienste/Dienste.Contracts/Dienste.Contracts.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Dienste.Contracts)" Label="Dienste.Contracts.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="031642f5-586f-402e-b1ec-90fe9b0ccc65" name="Implementations">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0ee23b0c-9384-44fc-82c0-b2da26a28b08" direction="Forward">
+          <layerMoniker Id="76715669-6460-407d-9219-e05d815b967f" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="989e4010-cca2-487c-aa92-300de700423c" name="Logging">
+          <ArtifactNode Label="Logging" Category="CodeSchema_Project" Id="(Assembly=../../CrossCutting/Logging/Logging.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Logging)" Label="Logging.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="7ee98a45-4bbe-47e6-b490-c098392db146" name="Mietmaterialdatenbankzugriffsschicht">
+          <ArtifactNode Label="Mietmaterialdatenbankzugriffsschicht" Category="CodeSchema_Project" Id="(Assembly=../L2_Datenzugriffsschicht/Datenzugriffsschicht/Mietmaterialdatenbankzugriffsschicht.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Server.L2.Datenzugriffschicht.Mietmaterialdatenbankzugriffsschicht)" Label="Server.L2.Datenzugriffschicht.Mietmaterialdatenbankzugriffsschicht.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="cead7291-c75e-4592-bba2-2360df36a3a4" name="Logikschicht">
+          <ArtifactNode Label="Logikschicht" Category="CodeSchema_Project" Id="(Assembly=../L3_Logikschicht/Vermitmanager/Logikschicht.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Logikschicht)" Label="Logikschicht.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="4656a6f2-be55-4ee2-9106-fe784ce0990c" name="Dienste">
+          <ArtifactNode Label="Dienste" Category="CodeSchema_Project" Id="(Assembly=../L4_Dienste/Dienste/Dienste.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Dienste)" Label="Dienste.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

@@ -1,0 +1,59 @@
+﻿<UserControl
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:mvvmClient.Ansichten"
+      xmlns:mvvmClient="clr-namespace:mvvmClient" 
+    x:Class="mvvmClient.Ansichten.Lagerdaten"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/mvvmClient;component/Styles/Tabelbasicstyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0"  VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinWidth="80" Margin="3" Content="Add" Command="{Binding AddCommand}" />
+            <Button Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinWidth="80" Margin="3" Content="Save" Command="{Binding SaveCommand}" />
+            <Button Grid.Column="2" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinWidth="80" Margin="3" Content="Delete" Command="{Binding DeleteCommand}" />
+        </Grid>
+
+        <DataGrid x:Name="C_Lager" Grid.Row="1" Grid.Column="0" AutoGenerateColumns="False"
+			ItemsSource="{Binding Lager, Mode=TwoWay}" SelectedItem="{Binding CurrentLager, Mode=TwoWay}">
+
+            <DataGrid.InputBindings>
+                <MouseBinding  Gesture="LeftClick" Command="{Binding Lagertabelclick}" />
+                <MouseBinding  Gesture="LeftDoubleClick" Command="{Binding Lagertabeldoubleclick}" />
+                <KeyBinding    Key="Enter" Command="{Binding PressEnterKey}"/>
+            </DataGrid.InputBindings>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*"  Header="Lagerbestand ID" Binding="{Binding Lagerbestand_ID}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="*"  Header="Maschinenart ID" Binding="{Binding Maschinenart_ID,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Maschinenartbezeichnung" Binding="{Binding Maschinenart.Maschinenartbezeichnung,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Gesamtanzahl" Binding="{Binding Gesamtanzahl,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Lagermenge" Binding="{Binding Lagermenge,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Vermietemenge" Binding="{Binding VermietetMenge,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="ChangeTracker" Binding="{Binding ChangeTracker.State, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</UserControl>

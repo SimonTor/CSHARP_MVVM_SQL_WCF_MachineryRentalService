@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{aa96ea9b-33f9-4569-8a7d-5662696b091d}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Server.Models</Name>
+    <RootNamespace>Client.Layerdiagram</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Client.Layerdiagram.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Server.Components.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Server.Components.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Server.Components.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Server.Components.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Server.Components.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Server.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Server.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Server.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Server.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Server.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\Logging.Contracts\Logging.Contracts.csproj">
+      <Name>Logging.Contracts</Name>
+      <Project>{2da3231c-63e6-4da1-94c0-8f01e6d9ef3c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CrossCutting\Logging\Logging.csproj">
+      <Name>Logging</Name>
+      <Project>{a252a476-0383-4c3f-a47f-6d0a4e25ced5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CrossCutting\Mietmaschinendatenbank_DataClasses\Mietmaschinendatenbank_DataClasses.csproj">
+      <Name>Mietmaschinendatenbank_DataClasses</Name>
+      <Project>{2364e52e-6fd6-4938-acd4-087d58fad5c3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\L2_Datenzugriffsschicht\Datenzugriffsschicht\Mietmaterialdatenbankzugriffsschicht.csproj">
+      <Name>Mietmaterialdatenbankzugriffsschicht</Name>
+      <Project>{59ce6e6c-9eb3-4fdb-b0c9-6276de3dd360}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\L2_Datenzugriffsschicht\Mietmaterialdatenbankzugriffsschicht.Contracts\Mietmaterialdatenbankzugriffsschicht.Contracts.csproj">
+      <Name>Mietmaterialdatenbankzugriffsschicht.Contracts</Name>
+      <Project>{be23aa33-83a0-4306-b3d1-0b131fda5fd8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\L3_Logikschicht\Logikschicht.Contracts\Logikschicht.Contracts.csproj">
+      <Name>Logikschicht.Contracts</Name>
+      <Project>{4157ed83-765a-48cd-b0fe-1068212ea9f9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\L3_Logikschicht\Vermitmanager\Logikschicht.csproj">
+      <Name>Logikschicht</Name>
+      <Project>{94ac8d2a-dab7-48f3-a1c4-396eb54f45ec}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\L4_Dienste\Dienste.Contracts\Dienste.Contracts.csproj">
+      <Name>Dienste.Contracts</Name>
+      <Project>{6306f2dd-aa2e-4f08-8335-7cc9b5e6e735}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\L4_Dienste\Dienste\Dienste.csproj">
+      <Name>Dienste</Name>
+      <Project>{6a880f25-5241-4d75-bba4-01367353f8d9}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

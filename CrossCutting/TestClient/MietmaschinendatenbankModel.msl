@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MietmaschinendatenbankModelStoreContainer" CdmEntityContainer="MietmaschinendatenbankModelContainer">
+    <EntitySetMapping Name="MaschinenkauflisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(MietmaschinendatenbankModel.Maschinenkauf)">
+        <MappingFragment StoreEntitySet="MaschinenkauflisteSatz">
+          <ScalarProperty Name="Maschinenkauf_ID" ColumnName="Maschinenkauf_ID" />
+          <ScalarProperty Name="Anzahl" ColumnName="Anzahl" />
+          <ScalarProperty Name="Einzelpreis" ColumnName="Einzelpreis" />
+          <ScalarProperty Name="Rechnungspreis" ColumnName="Rechnungspreis" />
+          <ScalarProperty Name="Kaufdatum" ColumnName="Kaufdatum" />
+          <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LagerbestandSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(MietmaschinendatenbankModel.Lagerbestand)">
+        <MappingFragment StoreEntitySet="LagerbestandSatz">
+          <ScalarProperty Name="Lagerbestand_ID" ColumnName="Lagerbestand_ID" />
+          <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+          <ScalarProperty Name="Gesamtanzahl" ColumnName="Gesamtanzahl" />
+          <ScalarProperty Name="Lagermenge" ColumnName="Lagermenge" />
+          <ScalarProperty Name="VermietetMenge" ColumnName="VermietetMenge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KundenlisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(MietmaschinendatenbankModel.Kunde)">
+        <MappingFragment StoreEntitySet="KundenlisteSatz">
+          <ScalarProperty Name="Kunden_ID" ColumnName="Kunden_ID" />
+          <ScalarProperty Name="Kundenname" ColumnName="Kundenname" />
+          <ScalarProperty Name="Kundengesamtumsatz" ColumnName="Kundengesamtumsatz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VermietungslisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(MietmaschinendatenbankModel.Vermietung)">
+        <MappingFragment StoreEntitySet="VermietungslisteSatz">
+          <ScalarProperty Name="Vermiet_ID" ColumnName="Vermiet_ID" />
+          <ScalarProperty Name="Vermietbegin" ColumnName="Vermietbegin" />
+          <ScalarProperty Name="Vermietende" ColumnName="Vermietende" />
+          <ScalarProperty Name="Gesamtpreis" ColumnName="Gesamtpreis" />
+          <ScalarProperty Name="Kunden_ID" ColumnName="Kunden_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaschinenartenlisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(MietmaschinendatenbankModel.Maschinenart)">
+        <MappingFragment StoreEntitySet="MaschinenartenlisteSatz">
+          <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+          <ScalarProperty Name="Gesamtkosten" ColumnName="Gesamtkosten" />
+          <ScalarProperty Name="Gesamteinnahmen" ColumnName="Gesamteinnahmen" />
+          <ScalarProperty Name="Vermietfaktor" ColumnName="Vermietfaktor" />
+          <ScalarProperty Name="Tagessatz" ColumnName="Tagessatz" />
+          <ScalarProperty Name="Rentabilität" ColumnName="Rentabilität" />
+          <ScalarProperty Name="Maschinenartbezeichnung" ColumnName="Maschinenartbezeichnung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="VermietungMaschinenart" TypeName="MietmaschinendatenbankModel.VermietungMaschinenart" StoreEntitySet="VermietungMaschinenart">
+      <EndProperty Name="Vermietung">
+        <ScalarProperty Name="Vermiet_ID" ColumnName="Vermietung_Vermiet_ID" />
+      </EndProperty>
+      <EndProperty Name="Maschinenart">
+        <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_Maschinenart_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MaschinenartLagerbestand" TypeName="MietmaschinendatenbankModel.MaschinenartLagerbestand" StoreEntitySet="MaschinenartenlisteSatz">
+      <EndProperty Name="Lagerbestand">
+        <ScalarProperty Name="Lagerbestand_ID" ColumnName="Lagerbestand_Lagerbestand_ID" />
+      </EndProperty>
+      <EndProperty Name="Maschinenart">
+        <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.Baumaschinenmietservice.de/Services" elementFormDefault="qualified" targetNamespace="http://www.Baumaschinenmietservice.de/Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" />
+  <xs:element name="GetCallAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="runstate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKundeByIdAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KundenID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKundeByIdAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Kunde" nillable="true" type="q1:Kunde" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllKundenAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllKundenAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Kunden" nillable="true" type="q2:ArrayOfKunde" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandByIdAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LagerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandByIdAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q3:Lagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLagerbestandlistenAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLagerbestandlistenAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q4:ArrayOfLagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandByMaschinenartenIdAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaschinenartID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandByMaschinenartenIdAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q5:Lagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandVorhandenAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandVorhandenAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q6:ArrayOfLagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandLeerAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandLeerAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q7:ArrayOfLagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandNichtsVermietetAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandNichtsVermietetAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q8:ArrayOfLagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandVermietetAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandVermietetAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q9:ArrayOfLagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandNichtImPoolAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLagerbestandNichtImPoolAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lager" nillable="true" type="q10:ArrayOfLagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaschinenarteByIdAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaschinenartID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaschinenarteByIdAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenart" nillable="true" type="q11:Maschinenart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenartenAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenartenAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenart" nillable="true" type="q12:ArrayOfMaschinenart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenartenIstRentabelAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenartenIstRentabelAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenart" nillable="true" type="q13:ArrayOfMaschinenart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenartenIstUnrentabelAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenartenIstUnrentabelAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenart" nillable="true" type="q14:ArrayOfMaschinenart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaschinenkaufByIdAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaschinenkaufID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaschinenkaufByIdAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenkauf" nillable="true" type="q15:Maschinenkauf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenkauf" nillable="true" type="q16:ArrayOfMaschinenkauf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeByMaschinenartAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaschinenartID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeByMaschinenartAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenkauf" nillable="true" type="q17:ArrayOfMaschinenkauf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeByDateAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Kaufdatum" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeByDateAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenkauf" nillable="true" type="q18:ArrayOfMaschinenkauf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeInZeitraumAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Vermitbegin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Vermitende" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMaschinenkaufeInZeitraumAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenkauf" nillable="true" type="q19:ArrayOfMaschinenkauf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVermietungByIdAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VermietungslisteID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVermietungByIdAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Vermietung" nillable="true" type="q20:Vermietung" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllVermietungenAnfrage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllVermietungenAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Vermietung" nillable="true" type="q21:ArrayOfVermietung" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVermietungenInZeitraumAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Vermitbegin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Vermitende" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVermietungenInZeitraumAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Vermietung" nillable="true" type="q22:ArrayOfVermietung" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVermietungenAnKundeAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KundenID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVermietungenAnKundeAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Vermietung" nillable="true" type="q23:ArrayOfVermietung" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NuerKundeAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Kundenname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NuerKundeAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Kunde" nillable="true" type="q24:Kunde" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NuerLagerplatzAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaschinenartID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NuerLagerplatzAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Lagerbestand" nillable="true" type="q25:Lagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeueMaschinenartAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Maschinenartname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeueMaschinenartAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenart" nillable="true" type="q26:Maschinenart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeuMaschinenkaufAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Einzelpreis" type="xs:int" />
+        <xs:element minOccurs="0" name="Kaufdatum" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="MaschinenartID" type="xs:int" />
+        <xs:element minOccurs="0" name="anz" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeuMaschinenkaufAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="Maschinenkauf" nillable="true" type="q27:Maschinenkauf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeueVermietungAnKundenAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KundenID" type="xs:int" />
+        <xs:element minOccurs="0" name="Vermitbegin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Vermitende" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeueVermietungAnKundenAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueVermietungAnKunden" nillable="true" type="q28:Vermietung" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaterialAnVermietungAnfügenAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaschinenartID" type="xs:int" />
+        <xs:element minOccurs="0" name="VermietID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaterialAnVermietungAnfügenAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="MaterialAnVermietungAnfügen" nillable="true" type="q29:Vermietung" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveKundenSetAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueKunden" nillable="true" type="q30:ArrayOfKunde" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveKundenSetAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueKunden" nillable="true" type="q31:ArrayOfKunde" />
+        <xs:element minOccurs="0" name="Statistik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLagerSetAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueLagerbestaende" nillable="true" type="q32:ArrayOfLagerbestand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLagerSetAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueLagerbestaende" nillable="true" type="q33:ArrayOfLagerbestand" />
+        <xs:element minOccurs="0" name="Statistik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMaschinenartSetAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueMaschinenarten" nillable="true" type="q34:ArrayOfMaschinenart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMaschinenartSetAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueMaschinenarten" nillable="true" type="q35:ArrayOfMaschinenart" />
+        <xs:element minOccurs="0" name="Statistik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMaschinenkaufeAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueMaschinenkaufe" nillable="true" type="q36:ArrayOfMaschinenkauf" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMaschinenkaufeAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueMaschinenkaufe" nillable="true" type="q37:ArrayOfMaschinenkauf" />
+        <xs:element minOccurs="0" name="Statistik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVermitungenSetAnfrage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueVermietungen" nillable="true" type="q38:ArrayOfVermietung" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVermitungenSetAntwort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" minOccurs="0" name="NeueVermietungen" nillable="true" type="q39:ArrayOfVermietung" />
+        <xs:element minOccurs="0" name="Statistik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

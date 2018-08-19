@@ -1,0 +1,120 @@
+﻿ <ribbon:RibbonWindow 
+    x:Class="mvvmClient.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ignore="http://www.ignore.com"
+    mc:Ignorable="d ignore"
+	xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+	Title="Mietmaschinenbuchungssystem"
+	x:Name="RibbonWindow"
+    xmlns:Ansichten="clr-namespace:mvvmClient.Ansichten"
+		    Width="650" Height="775" 
+    DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <!-- ################################## Hier werden die Views und die ViewModel durch ein DataTemplate zusammengebunden -->
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type Ansichten:KundendatenViewModel}">
+            <Ansichten:Kundendaten></Ansichten:Kundendaten>
+        </DataTemplate>
+         <DataTemplate DataType="{x:Type Ansichten:LagerdatenViewModel}">
+            <Ansichten:Lagerdaten></Ansichten:Lagerdaten>
+        </DataTemplate>
+         <DataTemplate DataType="{x:Type Ansichten:MaschinenartendatenViewModel}">
+            <Ansichten:Maschinenartendaten></Ansichten:Maschinenartendaten>
+        </DataTemplate>
+         <DataTemplate DataType="{x:Type Ansichten:MaschinenkaufdatenViewModel}">
+            <Ansichten:Maschinenkaufdaten></Ansichten:Maschinenkaufdaten>
+        </DataTemplate>
+         <DataTemplate DataType="{x:Type Ansichten:VermietungsdatenViewModel}">
+            <Ansichten:Vermietungsdaten></Ansichten:Vermietungsdaten>
+        </DataTemplate>
+    </Window.Resources>
+     
+<!-- ################################## Grundaufteilung des Bildschirms -->
+ <Grid x:Name="LayoutRoot">
+  <Grid.RowDefinitions>
+   <RowDefinition Height="Auto"/>
+   <RowDefinition Height="*"/>
+  </Grid.RowDefinitions>
+
+<!-- ################################## Bereich 1 des Grids: Ribbon -->
+  <ribbon:Ribbon x:Name="Ribbon">
+   <ribbon:Ribbon.ApplicationMenu>
+    <ribbon:RibbonApplicationMenu >
+     <ribbon:RibbonApplicationMenuItem Header="Hello _Ribbon" x:Name="MenuItem1"/>
+    </ribbon:RibbonApplicationMenu>
+   </ribbon:Ribbon.ApplicationMenu>
+
+   <!-- ################################## Ribbon Kundendaten -->
+   <ribbon:RibbonTab x:Name="Kundendaten"  IsSelected="{Binding Path=KundenDatenTabAktive}" Header="Kundendaten">
+    <ribbon:RibbonGroup Header="Anwendung">
+     <ribbon:RibbonButton Label="Ende" Command="{Binding EndeCommand}" />
+    </ribbon:RibbonGroup>
+
+    <ribbon:RibbonGroup Header="Kunde Suchen">
+      <ribbon:RibbonButton x:Name="KundeSuchen" Label="Kunde suchen" Command="{Binding Path=ActiveAnsichtViewModel.KundeSuchenCommand}" />
+    </ribbon:RibbonGroup>
+
+    <ribbon:RibbonGroup Header="Aktionen">
+     <ribbon:RibbonButton x:Name="KundeSpeichern"  Label="Kunde Speichern"  Command="{Binding Path=ActiveAnsichtViewModel.KundeSpeichernCommand}"  />
+    </ribbon:RibbonGroup>
+
+   </ribbon:RibbonTab> 
+      
+       <!-- ################################## Ribbon Lagerdaten-->
+   <ribbon:RibbonTab x:Name="Lagerdaten"  IsSelected="{Binding Path=LagerDatenTabAktive}" Header="Lagerdaten">
+    <ribbon:RibbonGroup Header="Anwendung">
+     <ribbon:RibbonButton Label="Ende" Command="{Binding EndeCommand}" />
+    </ribbon:RibbonGroup>
+
+    <ribbon:RibbonGroup Header="Aktionen">
+     <ribbon:RibbonButton x:Name="LagerdatenSpeichern" Label="Lagerdaten Speichern"  Command="{Binding Path=ActiveAnsichtViewModel.LagerdatenSpeichernCommand}"  />
+     <ribbon:RibbonButton x:Name="LagerdatenAbbrechen" Label="Lagerdaten Abbrechen"  Command="{Binding Path=ActiveAnsichtViewModel.LagerdatenSpeichernCommand}"  />
+    </ribbon:RibbonGroup>
+   </ribbon:RibbonTab>
+      
+      <!-- ################################## Ribbon Maschinenartendaten-->
+   <ribbon:RibbonTab x:Name="Maschinenartendaten"  IsSelected="{Binding Path=MaschinenartenDatenTabAktive}" Header="Maschinenartendaten">
+    <ribbon:RibbonGroup Header="Anwendung">
+     <ribbon:RibbonButton Label="Ende" Command="{Binding EndeCommand}" />
+    </ribbon:RibbonGroup>
+
+    <ribbon:RibbonGroup Header="Aktionen">
+     <ribbon:RibbonButton x:Name="MaschinenartendatenSpeichern" Label="Maschinenartendaten Speichern"  Command="{Binding Path=ActiveAnsichtViewModel.MaschinenartendatenSpeichernCommand}"  />
+     <ribbon:RibbonButton x:Name="MaschinenartendatenAbbrechen" Label="Maschinenartendaten Abbrechen"  Command="{Binding Path=ActiveAnsichtViewModel.MaschinenartendatenSpeichernCommand}"  />
+    </ribbon:RibbonGroup>
+   </ribbon:RibbonTab>
+      
+      <!-- ################################## Ribbon Maschinenkaufdaten-->
+   <ribbon:RibbonTab x:Name="Maschinenkaufdaten"  IsSelected="{Binding Path=MaschinenkaufDatenTabAktive}" Header="Maschinenkaufdaten">
+    <ribbon:RibbonGroup Header="Anwendung">
+     <ribbon:RibbonButton Label="Ende" Command="{Binding EndeCommand}" />
+    </ribbon:RibbonGroup>
+
+    <ribbon:RibbonGroup Header="Aktionen">
+     <ribbon:RibbonButton x:Name="MaschinenkaufdatenSpeichern" Label="Maschinenkaufdaten Speichern"  Command="{Binding Path=ActiveAnsichtViewModel.MaschinenkaufdatenSpeichernCommand}"  />
+     <ribbon:RibbonButton x:Name="MaschinenkaufdatenAbbrechen" Label="Maschinenkaufdaten Abbrechen"  Command="{Binding Path=ActiveAnsichtViewModel.MaschinenkaufdatenSpeichernCommand}"  />
+    </ribbon:RibbonGroup>
+   </ribbon:RibbonTab>
+      
+      <!-- ################################## Ribbon Vermitungsdaten-->
+   <ribbon:RibbonTab x:Name="Vermitungsdaten"  IsSelected="{Binding Path=VermietungsDatenTabAktive}" Header="Vermitungsdaten">
+    <ribbon:RibbonGroup Header="Anwendung">
+     <ribbon:RibbonButton Label="Ende" Command="{Binding EndeCommand}" />
+    </ribbon:RibbonGroup>
+
+    <ribbon:RibbonGroup Header="Aktionen">
+     <ribbon:RibbonButton x:Name="VermitungsdatenSpeichern" Label="Vermitungsdaten Speichern"  Command="{Binding Path=ActiveAnsichtViewModel.VermitungsdatenSpeichernCommand}"  />
+     <ribbon:RibbonButton x:Name="Abbrechen" Label="Abbrechen"  Command="{Binding Path=ActiveAnsichtViewModel.SpeichernCommand}"  />
+    </ribbon:RibbonGroup>
+   </ribbon:RibbonTab>
+      
+</ribbon:Ribbon>
+  <!-- ################################## Bereich 2 des Grid: Platzhalter für User Control -->
+  <ContentControl Content="{Binding Path=ActiveAnsichtViewModel}" Grid.Row="1"></ContentControl>
+
+ </Grid>
+     
+</ribbon:RibbonWindow>

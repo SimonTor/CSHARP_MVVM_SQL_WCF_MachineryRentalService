@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94EA4237-FEE1-489A-A008-DC8B9EE87E29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mvvmClient</RootNamespace>
+    <AssemblyName>mvvmClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Crosscutting.MietmaterialdatenbankKlassen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GalaSoft.MvvmLight, Version=5.1.1.35049, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\MvvmLightLibs.5.1.1.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.1.1.35049, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\MvvmLightLibs.5.1.1.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.1.1.35053, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\MvvmLightLibs.5.1.1.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\MvvmLightLibs.5.1.1.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ActionCommand.cs" />
+    <Compile Include="Ansichten\Kundentabelle\Kundendaten.xaml.cs">
+      <DependentUpon>Kundendaten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Kundentabelle\KundendatenViewModel.cs" />
+    <Compile Include="Ansichten\Lagertabelle\Lagerdaten.xaml.cs">
+      <DependentUpon>Lagerdaten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Lagertabelle\LagerdatenViewModel.cs" />
+    <Compile Include="Ansichten\Maschinenartentabelle\Maschinenartendaten.xaml.cs">
+      <DependentUpon>Maschinenartendaten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Maschinenartentabelle\MaschinenartendatenViewModel.cs" />
+    <Compile Include="Ansichten\Maschinenkauftabelle\Maschinenkaufdaten.xaml.cs">
+      <DependentUpon>Maschinenkaufdaten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Maschinenkauftabelle\MaschinenkaufdatenViewModel.cs" />
+    <Compile Include="Ansichten\Vermitungentabelle\Vermitungsdaten.xaml.cs">
+      <DependentUpon>Vermitungsdaten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Vermitungentabelle\VermitungsdatenViewModel.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="Model\DataItem.cs" />
+    <Compile Include="Model\DataService.cs" />
+    <Compile Include="Model\IDataService.cs" />
+    <Compile Include="Service References\ServiceDataSource\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialUserControl\CalenderColumnPicker.xaml.cs">
+      <DependentUpon>CalenderColumnPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Page Include="Ansichten\Kundentabelle\Kundendaten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ansichten\Lagertabelle\Lagerdaten.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ansichten\Maschinenartentabelle\Maschinenartendaten.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ansichten\Maschinenkauftabelle\Maschinenkaufdaten.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ansichten\Vermitungentabelle\Vermitungsdaten.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Skins\MainSkin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SpecialUserControl\CalenderColumnPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Tabelbasicstyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Kunde.datasource" />
+    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand.datasource" />
+    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Maschinenart.datasource" />
+    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf.datasource" />
+    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Vermietung.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\ServiceDataSource\IMietservicec2c612d6-6a06-4c12-8d5b-48f134bcf4dd.wsdl" />
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllKundenAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllLagerbestandlistenAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllMaschinenartenAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllMaschinenartenIstRentabelAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllMaschinenartenIstUnrentabelAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllMaschinenkaufeAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllMaschinenkaufeByDateAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllMaschinenkaufeByMaschinenartAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllMaschinenkaufeInZeitraumAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetAllVermietungenAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetCallAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetKundeByIdAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetLagerbestandByIdAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetLagerbestandByMaschinenartenIdAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetLagerbestandLeerAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetLagerbestandNichtImPoolAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetLagerbestandNichtsVermietetAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetLagerbestandVermietetAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetLagerbestandVorhandenAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetMaschinenarteByIdAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetMaschinenkaufByIdAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetVermietungByIdAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetVermietungenAnKundeAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.GetVermietungenInZeitraumAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.MaterialAnVermietungAnfügenAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.NeueMaschinenartAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.NeueVermietungAnKundenAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.NeuMaschinenkaufAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.NuerKundeAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.NuerLagerplatzAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.SaveKundenSetAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.SaveLagerSetAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.SaveMaschinenartSetAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.SaveMaschinenkaufeAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\mvvmClient.ServiceDataSource.SaveVermitungenSetAntwort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDataSource\WcfNinjectBaumaschinenmietService.wsdl" />
+    <None Include="Service References\ServiceDataSource\WcfNinjectBaumaschinenmietService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDataSource\WcfNinjectBaumaschinenmietService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDataSource\WcfNinjectBaumaschinenmietService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CrossCutting\MietmaterialdatenbankKlassen\MietmaterialdatenbankKlassen.csproj">
+      <Project>{66be3ae7-a508-4730-979d-708216e998cb}</Project>
+      <Name>MietmaterialdatenbankKlassen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\L2.Proxy\Mietmaschienenservice_Dienstproxy\Mietmaschienenservice_Dienstproxy.csproj">
+      <Project>{c8a01ebf-41d2-4a2e-b135-64756fb356a1}</Project>
+      <Name>Mietmaschienenservice_Dienstproxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceDataSource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDataSource\WcfNinjectBaumaschinenmietService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDataSource\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDataSource\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDataSource\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Kunde">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
+      <xs:element minOccurs="0" name="Kunden_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Kundengesamtumsatz" type="xs:double" />
+      <xs:element minOccurs="0" name="Kundenname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vermietung" nillable="true" type="tns:TrackableCollectionOfVermietungoSP_SwyHW" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Kunde" nillable="true" type="tns:Kunde" />
+  <xs:complexType name="ObjectChangeTracker">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExtendedProperties" nillable="true" type="tns:ExtendedPropertiesDictionary" />
+      <xs:element minOccurs="0" name="ObjectsAddedToCollectionProperties" nillable="true" type="tns:ObjectsAddedToCollectionProperties" />
+      <xs:element minOccurs="0" name="ObjectsRemovedFromCollectionProperties" nillable="true" type="tns:ObjectsRemovedFromCollectionProperties" />
+      <xs:element minOccurs="0" name="OriginalValues" nillable="true" type="tns:OriginalValuesDictionary" />
+      <xs:element minOccurs="0" name="State" type="tns:ObjectState" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="ObjectChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
+  <xs:complexType name="ExtendedPropertiesDictionary">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExtendedProperties">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Name" nillable="true" type="xs:string" />
+            <xs:element name="ExtendedProperty" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExtendedPropertiesDictionary" nillable="true" type="tns:ExtendedPropertiesDictionary" />
+  <xs:complexType name="ObjectsAddedToCollectionProperties">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddedObjectsForProperty">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CollectionPropertyName" nillable="true" type="xs:string" />
+            <xs:element name="AddedObjects" nillable="true" type="tns:ObjectList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjectsAddedToCollectionProperties" nillable="true" type="tns:ObjectsAddedToCollectionProperties" />
+  <xs:complexType name="ObjectList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ObjectValue" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjectList" nillable="true" type="tns:ObjectList" />
+  <xs:complexType name="ObjectsRemovedFromCollectionProperties">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeletedObjectsForProperty">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CollectionPropertyName" nillable="true" type="xs:string" />
+            <xs:element name="DeletedObjects" nillable="true" type="tns:ObjectList" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjectsRemovedFromCollectionProperties" nillable="true" type="tns:ObjectsRemovedFromCollectionProperties" />
+  <xs:complexType name="OriginalValuesDictionary">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OriginalValues">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Name" nillable="true" type="xs:string" />
+            <xs:element name="OriginalValue" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OriginalValuesDictionary" nillable="true" type="tns:OriginalValuesDictionary" />
+  <xs:simpleType name="ObjectState">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Unchanged" />
+          <xs:enumeration value="Added" />
+          <xs:enumeration value="Modified" />
+          <xs:enumeration value="Deleted" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="ObjectState" nillable="true" type="tns:ObjectState" />
+  <xs:complexType name="TrackableCollectionOfVermietungoSP_SwyHW">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Vermietung" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vermietung" nillable="true" type="tns:Vermietung" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackableCollectionOfVermietungoSP_SwyHW" nillable="true" type="tns:TrackableCollectionOfVermietungoSP_SwyHW" />
+  <xs:complexType name="Vermietung">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
+      <xs:element minOccurs="0" name="Gesamtpreis" type="xs:double" />
+      <xs:element minOccurs="0" name="Kunde" nillable="true" type="tns:Kunde" />
+      <xs:element minOccurs="0" name="Kunden_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Maschinenart" nillable="true" type="tns:TrackableCollectionOfMaschinenartoSP_SwyHW" />
+      <xs:element minOccurs="0" name="Vermiet_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Vermietbegin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Vermietende" type="xs:dateTime" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Vermietung" nillable="true" type="tns:Vermietung" />
+  <xs:complexType name="TrackableCollectionOfMaschinenartoSP_SwyHW">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Maschinenart" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Maschinenart" nillable="true" type="tns:Maschinenart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackableCollectionOfMaschinenartoSP_SwyHW" nillable="true" type="tns:TrackableCollectionOfMaschinenartoSP_SwyHW" />
+  <xs:complexType name="Maschinenart">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
+      <xs:element minOccurs="0" name="Gesamteinnahmen" type="xs:int" />
+      <xs:element minOccurs="0" name="Gesamtkosten" type="xs:int" />
+      <xs:element minOccurs="0" name="Lagerbestand" nillable="true" type="tns:Lagerbestand" />
+      <xs:element minOccurs="0" name="Maschinenart_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Maschinenartbezeichnung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Maschinenkaufliste" nillable="true" type="tns:TrackableCollectionOfMaschinenkaufoSP_SwyHW" />
+      <xs:element minOccurs="0" name="Rentabilität" type="xs:double" />
+      <xs:element minOccurs="0" name="Tagessatz" type="xs:double" />
+      <xs:element minOccurs="0" name="Vermietfaktor" type="xs:int" />
+      <xs:element minOccurs="0" name="Vermietung" nillable="true" type="tns:TrackableCollectionOfVermietungoSP_SwyHW" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Maschinenart" nillable="true" type="tns:Maschinenart" />
+  <xs:complexType name="Lagerbestand">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
+      <xs:element minOccurs="0" name="Gesamtanzahl" type="xs:int" />
+      <xs:element minOccurs="0" name="Lagerbestand_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Lagermenge" type="xs:int" />
+      <xs:element minOccurs="0" name="Maschinenart" nillable="true" type="tns:Maschinenart" />
+      <xs:element minOccurs="0" name="Maschinenart_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="VermietetMenge" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Lagerbestand" nillable="true" type="tns:Lagerbestand" />
+  <xs:complexType name="Maschinenkauf">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anzahl" type="xs:int" />
+      <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
+      <xs:element minOccurs="0" name="Einzelpreis" type="xs:int" />
+      <xs:element minOccurs="0" name="Kaufdatum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Maschinenart_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Maschinenartenliste" nillable="true" type="tns:Maschinenart" />
+      <xs:element minOccurs="0" name="Maschinenkauf_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rechnungspreis" type="xs:double" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Maschinenkauf" nillable="true" type="tns:Maschinenkauf" />
+  <xs:complexType name="TrackableCollectionOfMaschinenkaufoSP_SwyHW">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Maschinenkauf" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Maschinenkauf" nillable="true" type="tns:Maschinenkauf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackableCollectionOfMaschinenkaufoSP_SwyHW" nillable="true" type="tns:TrackableCollectionOfMaschinenkaufoSP_SwyHW" />
+  <xs:complexType name="ArrayOfKunde">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Kunde" nillable="true" type="tns:Kunde" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKunde" nillable="true" type="tns:ArrayOfKunde" />
+  <xs:complexType name="ArrayOfLagerbestand">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lagerbestand" nillable="true" type="tns:Lagerbestand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLagerbestand" nillable="true" type="tns:ArrayOfLagerbestand" />
+  <xs:complexType name="ArrayOfMaschinenart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Maschinenart" nillable="true" type="tns:Maschinenart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaschinenart" nillable="true" type="tns:ArrayOfMaschinenart" />
+  <xs:complexType name="ArrayOfMaschinenkauf">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Maschinenkauf" nillable="true" type="tns:Maschinenkauf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaschinenkauf" nillable="true" type="tns:ArrayOfMaschinenkauf" />
+  <xs:complexType name="ArrayOfVermietung">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vermietung" nillable="true" type="tns:Vermietung" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVermietung" nillable="true" type="tns:ArrayOfVermietung" />
+</xs:schema>

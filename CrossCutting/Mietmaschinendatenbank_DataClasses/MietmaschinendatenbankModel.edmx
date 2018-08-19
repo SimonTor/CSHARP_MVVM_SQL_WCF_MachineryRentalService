@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CrossCutting.Mietmaschinendatenbank_DataClasses.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CrossCuttingMietmaschinendatenbank_DataClassesStoreContainer">
+    <EntitySet Name="MaschinenkauflisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenkauflisteSatz" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LagerbestandSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.LagerbestandSatz" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KundenlisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.KundenlisteSatz" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VermietungslisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.VermietungslisteSatz" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MaschinenartenlisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenartenlisteSatz" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VermietungMaschinenart" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.VermietungMaschinenart" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MaschinenartenlisteMaschinenkaufliste" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenartenlisteMaschinenkaufliste">
+      <End Role="Maschinenartenliste" EntitySet="MaschinenartenlisteSatz" />
+      <End Role="Maschinenkaufliste" EntitySet="MaschinenkauflisteSatz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VermietungMaschinenart_Vermietung" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.FK_VermietungMaschinenart_Vermietung">
+      <End Role="Vermietung" EntitySet="VermietungslisteSatz" />
+      <End Role="VermietungMaschinenart" EntitySet="VermietungMaschinenart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VermietungMaschinenart_Maschinenart" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.FK_VermietungMaschinenart_Maschinenart">
+      <End Role="Maschinenart" EntitySet="MaschinenartenlisteSatz" />
+      <End Role="VermietungMaschinenart" EntitySet="VermietungMaschinenart" />
+    </AssociationSet>
+    <AssociationSet Name="MaschinenartLagerbestand" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenartLagerbestand">
+      <End Role="Maschinenart" EntitySet="MaschinenartenlisteSatz" />
+      <End Role="Lagerbestand" EntitySet="LagerbestandSatz" />
+    </AssociationSet>
+    <AssociationSet Name="KundeVermietung" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.KundeVermietung">
+      <End Role="Kunde" EntitySet="KundenlisteSatz" />
+      <End Role="Vermietung" EntitySet="VermietungslisteSatz" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MaschinenkauflisteSatz">
+    <Key>
+      <PropertyRef Name="Maschinenkauf_ID" />
+    </Key>
+    <Property Name="Maschinenkauf_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Anzahl" Type="int" Nullable="false" />
+    <Property Name="Einzelpreis" Type="int" Nullable="false" />
+    <Property Name="Rechnungspreis" Type="float" Nullable="false" />
+    <Property Name="Kaufdatum" Type="datetime" Nullable="false" />
+    <Property Name="Maschinenart_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LagerbestandSatz">
+    <Key>
+      <PropertyRef Name="Lagerbestand_ID" />
+    </Key>
+    <Property Name="Lagerbestand_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maschinenart_ID" Type="int" Nullable="false" />
+    <Property Name="Gesamtanzahl" Type="int" Nullable="false" />
+    <Property Name="Lagermenge" Type="int" Nullable="false" />
+    <Property Name="VermietetMenge" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KundenlisteSatz">
+    <Key>
+      <PropertyRef Name="Kunden_ID" />
+    </Key>
+    <Property Name="Kunden_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kundenname" Type="nvarchar(max)" Nullable="false"/>
+    <Property Name="Kundengesamtumsatz" Type="float" Nullable="false"/>
+  </EntityType>
+  <EntityType Name="VermietungslisteSatz">
+    <Key>
+      <PropertyRef Name="Vermiet_ID" />
+    </Key>
+    <Property Name="Vermiet_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vermietbegin" Type="datetime" Nullable="false" />
+    <Property Name="Vermietende" Type="datetime" Nullable="false" />
+    <Property Name="Gesamtpreis" Type="float" Nullable="false" />
+    <Property Name="Kunden_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaschinenartenlisteSatz">
+    <Key>
+      <PropertyRef Name="Maschinenart_ID" />
+    </Key>
+    <Property Name="Maschinenart_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gesamtkosten" Type="int" Nullable="false" />
+    <Property Name="Gesamteinnahmen" Type="int" Nullable="false" />
+    <Property Name="Vermietfaktor" Type="int" Nullable="false" />
+    <Property Name="Tagessatz" Type="float" Nullable="false" />
+    <Property Name="Rentabilität" Type="float" Nullable="false" />
+    <Property Name="Maschinenartbezeichnung" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Lagerbestand_Lagerbestand_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VermietungMaschinenart">
+    <Key>
+      <PropertyRef Name="Vermietung_Vermiet_ID" />
+      <PropertyRef Name="Maschinenart_Maschinenart_ID" />
+    </Key>
+    <Property Name="Vermietung_Vermiet_ID" Type="int" Nullable="false" />
+    <Property Name="Maschinenart_Maschinenart_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="MaschinenartenlisteMaschinenkaufliste">
+    <End Role="Maschinenartenliste" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenartenlisteSatz" Multiplicity="1" />
+    <End Role="Maschinenkaufliste" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenkauflisteSatz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Maschinenartenliste">
+        <PropertyRef Name="Maschinenart_ID" />
+      </Principal>
+      <Dependent Role="Maschinenkaufliste">
+        <PropertyRef Name="Maschinenart_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MaschinenartLagerbestand">
+    <End Role="Maschinenart" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenartenlisteSatz" Multiplicity="*" />
+    <End Role="Lagerbestand" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.LagerbestandSatz" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Lagerbestand">
+        <PropertyRef Name="Lagerbestand_ID" />
+      </Principal>
+      <Dependent Role="Maschinenart">
+        <PropertyRef Name="Lagerbestand_Lagerbestand_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KundeVermietung">
+    <End Role="Kunde" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.KundenlisteSatz" Multiplicity="1" />
+    <End Role="Vermietung" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.VermietungslisteSatz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kunde">
+        <PropertyRef Name="Kunden_ID" />
+      </Principal>
+      <Dependent Role="Vermietung">
+        <PropertyRef Name="Kunden_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VermietungMaschinenart_Vermietung">
+    <End Role="Vermietung" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.VermietungslisteSatz" Multiplicity="1" />
+    <End Role="VermietungMaschinenart" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.VermietungMaschinenart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vermietung">
+        <PropertyRef Name="Vermiet_ID" />
+      </Principal>
+      <Dependent Role="VermietungMaschinenart">
+        <PropertyRef Name="Vermietung_Vermiet_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VermietungMaschinenart_Maschinenart">
+    <End Role="VermietungMaschinenart" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.VermietungMaschinenart" Multiplicity="*" />
+    <End Role="Maschinenart" Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Store.MaschinenartenlisteSatz" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Maschinenart">
+        <PropertyRef Name="Maschinenart_ID" />
+      </Principal>
+      <Dependent Role="VermietungMaschinenart">
+        <PropertyRef Name="Maschinenart_Maschinenart_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CrossCutting.Mietmaschinendatenbank_DataClasses" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="MietmaschinendatenbankModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MaschinenkauflisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenkauf" />
+          <EntitySet Name="LagerbestandSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Lagerbestand" />
+          <EntitySet Name="KundenlisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Kunde" />
+          <EntitySet Name="VermietungslisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Vermietung" />
+          <EntitySet Name="MaschinenartenlisteSatz" EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenart" />
+          <AssociationSet Name="MaschinenartenlisteMaschinenkaufliste" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartenlisteMaschinenkaufliste">
+            <End Role="Maschinenartenliste" EntitySet="MaschinenartenlisteSatz" />
+            <End Role="Maschinenkaufliste" EntitySet="MaschinenkauflisteSatz" />
+          </AssociationSet>
+          <AssociationSet Name="VermietungMaschinenart" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.VermietungMaschinenart">
+            <End Role="Vermietung" EntitySet="VermietungslisteSatz" />
+            <End Role="Maschinenart" EntitySet="MaschinenartenlisteSatz" />
+          </AssociationSet>
+          <AssociationSet Name="MaschinenartLagerbestand" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartLagerbestand">
+            <End Role="Maschinenart" EntitySet="MaschinenartenlisteSatz" />
+            <End Role="Lagerbestand" EntitySet="LagerbestandSatz" />
+          </AssociationSet>
+          <AssociationSet Name="KundeVermietung" Association="CrossCutting.Mietmaschinendatenbank_DataClasses.KundeVermietung">
+            <End Role="Kunde" EntitySet="KundenlisteSatz" />
+            <End Role="Vermietung" EntitySet="VermietungslisteSatz" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Maschinenkauf">
+          <Key>
+            <PropertyRef Name="Maschinenkauf_ID" />
+          </Key>
+          <Property Type="Int32" Name="Maschinenkauf_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Anzahl" Nullable="false" />
+          <Property Type="Int32" Name="Einzelpreis" Nullable="false" />
+          <Property Type="Double" Name="Rechnungspreis" Nullable="false" />
+          <Property Type="DateTime" Name="Kaufdatum" Nullable="false" />
+          <NavigationProperty Name="Maschinenartenliste" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartenlisteMaschinenkaufliste" FromRole="Maschinenkaufliste" ToRole="Maschinenartenliste" />
+          <Property Type="Int32" Name="Maschinenart_ID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lagerbestand">
+          <Key>
+            <PropertyRef Name="Lagerbestand_ID" />
+          </Key>
+          <Property Type="Int32" Name="Lagerbestand_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Maschinenart_ID" Nullable="false" />
+          <Property Type="Int32" Name="Gesamtanzahl" Nullable="false" />
+          <Property Type="Int32" Name="Lagermenge" Nullable="false" />
+          <Property Type="Int32" Name="VermietetMenge" Nullable="false" />
+          <NavigationProperty Name="Maschinenart" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartLagerbestand" FromRole="Lagerbestand" ToRole="Maschinenart" />
+        </EntityType>
+        <EntityType Name="Kunde">
+          <Key>
+            <PropertyRef Name="Kunden_ID" />
+          </Key>
+          <Property Type="Int32" Name="Kunden_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Kundenname" Nullable="false" />
+          <Property Type="Double" Name="Kundengesamtumsatz" Nullable="false" />
+          <NavigationProperty Name="Vermietung" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.KundeVermietung" FromRole="Kunde" ToRole="Vermietung" />
+        </EntityType>
+        <EntityType Name="Vermietung">
+          <Key>
+            <PropertyRef Name="Vermiet_ID" />
+          </Key>
+          <Property Type="Int32" Name="Vermiet_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Vermietbegin" Nullable="false" />
+          <Property Type="DateTime" Name="Vermietende" Nullable="false" />
+          <Property Type="Double" Name="Gesamtpreis" Nullable="false" />
+          <NavigationProperty Name="Maschinenart" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.VermietungMaschinenart" FromRole="Vermietung" ToRole="Maschinenart" />
+          <NavigationProperty Name="Kunde" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.KundeVermietung" FromRole="Vermietung" ToRole="Kunde" />
+          <Property Name="Kunden_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Maschinenart">
+          <Key>
+            <PropertyRef Name="Maschinenart_ID" />
+          </Key>
+          <Property Type="Int32" Name="Maschinenart_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Gesamtkosten" Nullable="false" />
+          <Property Type="Int32" Name="Gesamteinnahmen" Nullable="false" />
+          <Property Type="Int32" Name="Vermietfaktor" Nullable="false" />
+          <Property Type="Double" Name="Tagessatz" Nullable="false" />
+          <Property Type="Double" Name="Rentabilität" Nullable="false" />
+          <NavigationProperty Name="Maschinenkaufliste" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartenlisteMaschinenkaufliste" FromRole="Maschinenartenliste" ToRole="Maschinenkaufliste" />
+          <NavigationProperty Name="Vermietung" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.VermietungMaschinenart" FromRole="Maschinenart" ToRole="Vermietung" />
+          <NavigationProperty Name="Lagerbestand" Relationship="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartLagerbestand" FromRole="Maschinenart" ToRole="Lagerbestand" />
+          <Property Name="Maschinenartbezeichnung" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="MaschinenartenlisteMaschinenkaufliste">
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenart" Role="Maschinenartenliste" Multiplicity="1" />
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenkauf" Role="Maschinenkaufliste" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maschinenartenliste">
+              <PropertyRef Name="Maschinenart_ID" />
+            </Principal>
+            <Dependent Role="Maschinenkaufliste">
+              <PropertyRef Name="Maschinenart_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VermietungMaschinenart">
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Vermietung" Role="Vermietung" Multiplicity="*" />
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenart" Role="Maschinenart" Multiplicity="*" />
+        </Association>
+        <Association Name="MaschinenartLagerbestand">
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenart" Role="Maschinenart" Multiplicity="1" />
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Lagerbestand" Role="Lagerbestand" Multiplicity="1" />
+        </Association>
+        <Association Name="KundeVermietung">
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Kunde" Role="Kunde" Multiplicity="1" />
+          <End Type="CrossCutting.Mietmaschinendatenbank_DataClasses.Vermietung" Role="Vermietung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kunde">
+              <PropertyRef Name="Kunden_ID" />
+            </Principal>
+            <Dependent Role="Vermietung">
+              <PropertyRef Name="Kunden_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CrossCuttingMietmaschinendatenbank_DataClassesStoreContainer" CdmEntityContainer="MietmaschinendatenbankModelContainer">
+    <EntitySetMapping Name="MaschinenkauflisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenkauf)">
+        <MappingFragment StoreEntitySet="MaschinenkauflisteSatz">
+          <ScalarProperty Name="Maschinenkauf_ID" ColumnName="Maschinenkauf_ID" />
+          <ScalarProperty Name="Anzahl" ColumnName="Anzahl" />
+          <ScalarProperty Name="Einzelpreis" ColumnName="Einzelpreis" />
+          <ScalarProperty Name="Rechnungspreis" ColumnName="Rechnungspreis" />
+          <ScalarProperty Name="Kaufdatum" ColumnName="Kaufdatum" />
+          <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LagerbestandSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(CrossCutting.Mietmaschinendatenbank_DataClasses.Lagerbestand)">
+        <MappingFragment StoreEntitySet="LagerbestandSatz">
+          <ScalarProperty Name="Lagerbestand_ID" ColumnName="Lagerbestand_ID" />
+          <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+          <ScalarProperty Name="Gesamtanzahl" ColumnName="Gesamtanzahl" />
+          <ScalarProperty Name="Lagermenge" ColumnName="Lagermenge" />
+          <ScalarProperty Name="VermietetMenge" ColumnName="VermietetMenge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KundenlisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(CrossCutting.Mietmaschinendatenbank_DataClasses.Kunde)">
+        <MappingFragment StoreEntitySet="KundenlisteSatz">
+          <ScalarProperty Name="Kunden_ID" ColumnName="Kunden_ID" />
+          <ScalarProperty Name="Kundenname" ColumnName="Kundenname" />
+          <ScalarProperty Name="Kundengesamtumsatz" ColumnName="Kundengesamtumsatz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VermietungslisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(CrossCutting.Mietmaschinendatenbank_DataClasses.Vermietung)">
+        <MappingFragment StoreEntitySet="VermietungslisteSatz">
+          <ScalarProperty Name="Vermiet_ID" ColumnName="Vermiet_ID" />
+          <ScalarProperty Name="Vermietbegin" ColumnName="Vermietbegin" />
+          <ScalarProperty Name="Vermietende" ColumnName="Vermietende" />
+          <ScalarProperty Name="Gesamtpreis" ColumnName="Gesamtpreis" />
+          <ScalarProperty Name="Kunden_ID" ColumnName="Kunden_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaschinenartenlisteSatz">
+      <EntityTypeMapping TypeName="IsTypeOf(CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenart)">
+        <MappingFragment StoreEntitySet="MaschinenartenlisteSatz">
+          <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+          <ScalarProperty Name="Gesamtkosten" ColumnName="Gesamtkosten" />
+          <ScalarProperty Name="Gesamteinnahmen" ColumnName="Gesamteinnahmen" />
+          <ScalarProperty Name="Vermietfaktor" ColumnName="Vermietfaktor" />
+          <ScalarProperty Name="Tagessatz" ColumnName="Tagessatz" />
+          <ScalarProperty Name="Rentabilität" ColumnName="Rentabilität" />
+          <ScalarProperty Name="Maschinenartbezeichnung" ColumnName="Maschinenartbezeichnung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="VermietungMaschinenart" TypeName="CrossCutting.Mietmaschinendatenbank_DataClasses.VermietungMaschinenart" StoreEntitySet="VermietungMaschinenart">
+      <EndProperty Name="Vermietung">
+        <ScalarProperty Name="Vermiet_ID" ColumnName="Vermietung_Vermiet_ID" />
+      </EndProperty>
+      <EndProperty Name="Maschinenart">
+        <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_Maschinenart_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MaschinenartLagerbestand" TypeName="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartLagerbestand" StoreEntitySet="MaschinenartenlisteSatz">
+      <EndProperty Name="Lagerbestand">
+        <ScalarProperty Name="Lagerbestand_ID" ColumnName="Lagerbestand_Lagerbestand_ID" />
+      </EndProperty>
+      <EndProperty Name="Maschinenart">
+        <ScalarProperty Name="Maschinenart_ID" ColumnName="Maschinenart_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="724ee54038e64a628db9c64287bbf433" Name="Diagram1">
+        <EntityTypeShape EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenkauf" Width="1.875" PointX="8.875" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Lagerbestand" Width="1.875" PointX="8.875" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Kunde" Width="2.125" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Vermietung" Width="1.5" PointX="3.625" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenart" Width="2.5" PointX="6" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartenlisteMaschinenkaufliste" ManuallyRouted="false" />
+        <AssociationConnector Association="CrossCutting.Mietmaschinendatenbank_DataClasses.VermietungMaschinenart" ManuallyRouted="false" />
+        <AssociationConnector Association="CrossCutting.Mietmaschinendatenbank_DataClasses.MaschinenartLagerbestand" ManuallyRouted="false" />
+        <AssociationConnector Association="CrossCutting.Mietmaschinendatenbank_DataClasses.KundeVermietung" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

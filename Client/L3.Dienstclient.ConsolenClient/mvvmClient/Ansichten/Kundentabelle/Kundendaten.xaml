@@ -1,0 +1,169 @@
+﻿<UserControl
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:mvvmClient.Ansichten"
+      xmlns:mvvmClient="clr-namespace:mvvmClient" 
+    x:Class="mvvmClient.Ansichten.Kundendaten"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+
+    <!-- http://stackoverflow.com/questions/27131113/rowdetailstemplate-itemsource-binded-to-an-ef-navigationproperty -->
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/mvvmClient;component/Styles/Tabelbasicstyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries> 
+        </ResourceDictionary>          
+    </UserControl.Resources>
+    
+    
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0"  VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinWidth="80" Margin="3" Content="Add"  Command="{Binding AddCommand}"/>
+            <Button Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinWidth="80" Margin="3" Content="Save"  Command="{Binding SaveCommand}"/>
+            <Button Grid.Column="2" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinWidth="80" Margin="3" Content="Delete"  Command="{Binding DeleteCommand}"/>
+        </Grid>
+
+        <DataGrid x:Name="C_Kunden" Grid.Row="1" Grid.Column="0" AutoGenerateColumns="False"
+			ItemsSource="{Binding Kunden, Mode=TwoWay}" SelectedItem="{Binding CurrentKunde, Mode=TwoWay}" Margin="10,5,-10,-5">
+            
+            <DataGrid.InputBindings>                
+                <MouseBinding  Gesture="LeftClick" Command="{Binding Kundentabelclick}" />
+                <MouseBinding  Gesture="LeftDoubleClick" Command="{Binding Kundentabeldoubleclick}" />
+                <KeyBinding    Key="Enter" Command="{Binding PressEnterKey}"/>
+            </DataGrid.InputBindings>
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*"  Header="Kunden ID" Binding="{Binding Kunden_ID}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="*"  Header="Kundenname" Binding="{Binding Kundenname ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Kundenumsatz" Binding="{Binding Kundengesamtumsatz,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <DataGridTemplateColumn Width="*"  Header="Vermietungen">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            
+                            <Grid>
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition MinWidth="20" Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+
+                             <Label Margin="0,0,0,0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+	                             Name="VermietungCount" Content="{Binding Vermietung.Count}" ></Label>
+                                
+                            <Expander Grid.Column="1" Height="Auto" Name="expander1" Width="150" DataContext="{Binding ElementName=grid1, Path=DataContext}">
+                                
+                                <Expander.HeaderTemplate>
+                                     <DataTemplate>
+                                            <TextBlock HorizontalAlignment="Right" Text="Show Datas" />
+                                     </DataTemplate>
+                                </Expander.HeaderTemplate>
+                                
+                                    <Grid  HorizontalAlignment="Stretch" Name="grid1" VerticalAlignment="Stretch" Width="Auto" >
+                                        <StackPanel Height="100" HorizontalAlignment="Right" Orientation="Horizontal" Name="stackPanel3" VerticalAlignment="Top" Width="Auto">
+                                            <TextBlock HorizontalAlignment="Right" Text="{Binding Vermietung.Count}"  />
+
+                                            <Button Content="Save" Height="23"  Name="button2" Width="75" />
+                                            <Button  Name="buton" Content="Edit" Height="23"  Width="75"/>
+                                        </StackPanel>
+                                    </Grid>
+
+                                </Expander>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Width="*"  Header="Vermietungen" Binding="{Binding Vermietung.Count}"/>
+                <DataGridTextColumn Width="*"  Header="ChangeTracker" Binding="{Binding ChangeTracker.State, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </DataGrid.Columns>
+            
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <DataGrid x:Name="C_Vermietungs" EnableRowVirtualization="True" VerticalAlignment="Stretch" 
+                              Width="400" Height="auto" HorizontalAlignment="Stretch" AutoGenerateColumns="False"
+			                  ItemsSource="{Binding Path=SelectedItem.Vermietung, ElementName=C_Kunden}">
+            
+                <DataGrid.InputBindings>
+                    <MouseBinding  Gesture="LeftDoubleClick" Command="{Binding Vermietungstabeldoubleclick}" />
+                </DataGrid.InputBindings>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="*"  Header="Vermiet ID" Binding="{Binding Vermiet_ID}" IsReadOnly="True"/>
+                            <DataGridTextColumn Width="*"  Header="Kunden ID" Binding="{Binding Kunden_ID}"/>
+                            <DataGridTextColumn Width="*"  Header="Kunde" Binding="{Binding Kunde}"/>
+                            <DataGridTextColumn Width="*"  Header="Maschinenart" Binding="{Binding Maschinenart}"/>
+
+                            <DataGridTemplateColumn Width="*"  Header="Vermitbegin">
+                                <!-- editing template -->
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker
+                                   SelectedDate="{Binding Vermitbegin, Mode=TwoWay}"
+                                   BorderThickness="0"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                                <!-- standard template -->
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <TextBlock.Text>
+                                                <Binding Path="Vermitbegin"
+                                           ConverterCulture="de-DE"
+                                           StringFormat="{}{0:d}"/>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="*"  Header="Vermietende">
+                                <!-- editing template -->
+                                <DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataTemplate>
+                                        <DatePicker
+                                   SelectedDate="{Binding Vermietende, Mode=TwoWay}"
+                                   BorderThickness="0"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellEditingTemplate>
+                                <!-- standard template -->
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <TextBlock.Text>
+                                                <Binding Path="Vermietende"
+                                           ConverterCulture="de-DE"
+                                           StringFormat="{}{0:d}"/>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTextColumn Width="*"  Header="Gesamtpreis" Binding="{Binding Gesamtpreis}"/>
+                            <DataGridTextColumn Width="*"  Header="ChangeTracker" Binding="{Binding ChangeTracker.State}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+            
+        </DataGrid>
+
+
+    </Grid>
+</UserControl>

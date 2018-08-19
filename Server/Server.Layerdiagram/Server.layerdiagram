@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0562178f-f1b5-46d2-8f2b-107ad324c2d9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="bdc69504-29cf-498e-9112-dfae136aa8db" name="CrossCutting">
+      <references>
+        <reference Id="e02e879e-4dd3-4b92-9670-7ccf25be550d" name="Logging">
+          <ArtifactNode Label="Logging" Category="CodeSchema_Project" Id="(Assembly=../../CrossCutting/Logging/Logging.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Logging)" Label="Logging.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="93058070-a618-4de3-9932-f2ba3d1ceedd" name="Mietmaschinendatenbank_DataClasses">
+          <ArtifactNode Label="Mietmaschinendatenbank_DataClasses" Category="CodeSchema_Project" Id="(Assembly=../../CrossCutting/Mietmaschinendatenbank_DataClasses/Mietmaschinendatenbank_DataClasses.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Mietmaschinendatenbank_Geschäftsobjekt.CrossCutting)" Label="Mietmaschinendatenbank_Geschäftsobjekt.CrossCutting.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="f770d9f0-8a83-467a-9173-05625af44466" name="MietmaterialdatenbankKlassen">
+          <ArtifactNode Label="MietmaterialdatenbankKlassen" Category="CodeSchema_Project" Id="(Assembly=../L1_Datenbasisschicht/MietmaterialdatenbankKlassen/MietmaterialdatenbankKlassen.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Server.L1.Datenbasisschicht.MietmaterialdatenbankKlassen)" Label="Server.L1.Datenbasisschicht.MietmaterialdatenbankKlassen.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="6a2ae5fc-9343-4c8f-a4ba-06d0eb2f53fd" name="Datenzugriff">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="aca5e3ac-7c39-493e-9f6b-dd2d6ecdb29d" direction="Forward">
+          <layerMoniker Id="bdc69504-29cf-498e-9112-dfae136aa8db" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="0b89f60f-7f3c-4d3a-83f8-7f4c6a8a0f8c" name="Mietmaterialdatenbankzugriffsschicht">
+          <ArtifactNode Label="Mietmaterialdatenbankzugriffsschicht" Category="CodeSchema_Project" Id="(Assembly=../L2_Datenzugriffsschicht/Datenzugriffsschicht/Mietmaterialdatenbankzugriffsschicht.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Server.L2.Datenzugriffschicht.Mietmaterialdatenbankzugriffsschicht)" Label="Server.L2.Datenzugriffschicht.Mietmaterialdatenbankzugriffsschicht.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="9128ae8f-6b91-4da1-9fff-f43df3a73969" name="Dependency Injection">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="685b2462-bd35-4c0a-b239-d9577fc30da4" direction="Forward">
+          <layerMoniker Id="bdc69504-29cf-498e-9112-dfae136aa8db" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="b340a7c8-de76-45cc-90f6-8524d18adeb5" direction="Forward">
+          <layerMoniker Id="6a2ae5fc-9343-4c8f-a4ba-06d0eb2f53fd" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="f32a0d0d-5a63-4f7b-9331-1c18981bd89a" direction="Forward">
+          <layerMoniker Id="8281ac95-2524-4f17-924e-a06456a57d77" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="e8e7eec7-9946-4dfa-a7f9-6f9c80934eec" direction="Forward">
+          <layerMoniker Id="82de0969-aa0b-4ba4-82b0-750f4d372939" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="ddbb1406-72ec-43fc-8f80-79195ac35c23" name="DepenendencyInjection">
+          <ArtifactNode Label="DepenendencyInjection" Category="CodeSchema_Project" Id="(Assembly=../L0_Infrastructure/DepenendencyInjection/DepenendencyInjection.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=DepenendencyInjection)" Label="DepenendencyInjection.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="8281ac95-2524-4f17-924e-a06456a57d77" name="Datanlogik">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="63d08bf7-5d75-449f-8b45-13988c4eeb1f" direction="Forward">
+          <layerMoniker Id="bdc69504-29cf-498e-9112-dfae136aa8db" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="34cf9439-dfb2-43dc-90fd-18b4d5a113f3" name="Logikschicht">
+          <ArtifactNode Label="Logikschicht" Category="CodeSchema_Project" Id="(Assembly=../L3_Logikschicht/Vermitmanager/Logikschicht.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Logikschicht)" Label="Logikschicht.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="82de0969-aa0b-4ba4-82b0-750f4d372939" name="Dienste">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="71feb887-7c73-4a8c-875f-dbc45a37f283" direction="Forward">
+          <layerMoniker Id="bdc69504-29cf-498e-9112-dfae136aa8db" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="366d3b6e-6877-4ddc-bae9-4d56bc415226" name="Dienste">
+          <ArtifactNode Label="Dienste" Category="CodeSchema_Project" Id="(Assembly=../L4_Dienste/Dienste/Dienste.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Dienste)" Label="Dienste.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="d9e9558e-bb94-4d85-8f35-656ddb056d26" name="Dienstserver">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="69610aaa-0699-4170-9b7a-a97a9cdbcce0" direction="Forward">
+          <layerMoniker Id="bdc69504-29cf-498e-9112-dfae136aa8db" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="7394b6b0-f2a8-4051-8dbb-727741199290" direction="Forward">
+          <layerMoniker Id="9128ae8f-6b91-4da1-9fff-f43df3a73969" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="cda52dac-d8cc-4a6b-a716-5dbc81863d6b" name="BaumschinenmietserviceServer">
+          <ArtifactNode Label="BaumschinenmietserviceServer" Category="CodeSchema_Project" Id="(Assembly=../L5_Dienstserver/BaumschinenmietserviceServer/BaumschinenmietserviceServer.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=BaumschinenmietserviceServer)" Label="BaumschinenmietserviceServer.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

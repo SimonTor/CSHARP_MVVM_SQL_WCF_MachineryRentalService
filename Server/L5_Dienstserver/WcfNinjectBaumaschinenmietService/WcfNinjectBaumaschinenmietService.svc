@@ -1,0 +1,5 @@
+﻿<%@ ServiceHost 
+    Language="C#" 
+    Debug="true" 
+    Service="Crosscutting.Dienste.Shared.Contracts.IMietservice" 
+    Factory="Server.L5.Dienstserver.WcfNinjectBaumaschinenmietServiceHostFactory"  %>

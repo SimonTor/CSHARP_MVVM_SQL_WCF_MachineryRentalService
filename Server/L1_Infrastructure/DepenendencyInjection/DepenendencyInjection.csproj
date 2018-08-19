@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E215D531-C3C7-4C89-BAF5-F67F5FBB477E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Server.L1.Infrastructure</RootNamespace>
+    <AssemblyName>Server.L1.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrossCuttingSchicht\LoggingMapping.cs" />
+    <Compile Include="L2.Datenzugriffschicht\DatenzugriffschichtMapping.cs" />
+    <Compile Include="L3.Logikschicht\LogikschichtMapping.cs" />
+    <Compile Include="L4.Dienstschicht\DienstschichtMapping.cs" />
+    <Compile Include="NinjectAgregations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CrossCutting\Dienste.Shared.Contracts\Dienste.Shared.Contracts.csproj">
+      <Project>{e9fa65f2-e203-4631-8bd0-fbe0341fed3e}</Project>
+      <Name>Dienste.Shared.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CrossCutting\Logging.Contracts\Logging.Contracts.csproj">
+      <Project>{2da3231c-63e6-4da1-94c0-8f01e6d9ef3c}</Project>
+      <Name>Logging.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CrossCutting\Logging\Logging.csproj">
+      <Project>{a252a476-0383-4c3f-a47f-6d0a4e25ced5}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\L2_Datenzugriffsschicht\Datenzugriffsschicht\Mietmaterialdatenbankzugriffsschicht.csproj">
+      <Project>{59ce6e6c-9eb3-4fdb-b0c9-6276de3dd360}</Project>
+      <Name>Mietmaterialdatenbankzugriffsschicht</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\L2_Datenzugriffsschicht\Mietmaterialdatenbankzugriffsschicht.Contracts\Mietmaterialdatenbankzugriffsschicht.Contracts.csproj">
+      <Project>{be23aa33-83a0-4306-b3d1-0b131fda5fd8}</Project>
+      <Name>Mietmaterialdatenbankzugriffsschicht.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\L3_Logikschicht\Logikschicht.Contracts\Logikschicht.Contracts.csproj">
+      <Project>{4157ed83-765a-48cd-b0fe-1068212ea9f9}</Project>
+      <Name>Logikschicht.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\L3_Logikschicht\Vermitmanager\Logikschicht.csproj">
+      <Project>{94ac8d2a-dab7-48f3-a1c4-396eb54f45ec}</Project>
+      <Name>Logikschicht</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\L4_Dienste\Dienste.Contracts\Dienste.Contracts.csproj">
+      <Project>{6306f2dd-aa2e-4f08-8335-7cc9b5e6e735}</Project>
+      <Name>Dienste.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\L4_Dienste\Dienste\Dienste.csproj">
+      <Project>{6a880f25-5241-4d75-bba4-01367353f8d9}</Project>
+      <Name>Dienste</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
