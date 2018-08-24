@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
 
 namespace mvvmClient.Model
 {

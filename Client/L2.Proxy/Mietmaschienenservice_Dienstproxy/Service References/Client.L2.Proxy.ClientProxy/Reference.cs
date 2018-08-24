@@ -15,66 +15,977 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ExtendedPropertiesDictionary", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="ExtendedProperties", KeyName="Name", ValueName="ExtendedProperty")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Kunde", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class Kunde : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTrackerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Kunden_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double KundengesamtumsatzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KundennameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfVermietungDZ4vHCX7 VermietungField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTracker {
+            get {
+                return this.ChangeTrackerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChangeTrackerField, value) != true)) {
+                    this.ChangeTrackerField = value;
+                    this.RaisePropertyChanged("ChangeTracker");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Kunden_ID {
+            get {
+                return this.Kunden_IDField;
+            }
+            set {
+                if ((this.Kunden_IDField.Equals(value) != true)) {
+                    this.Kunden_IDField = value;
+                    this.RaisePropertyChanged("Kunden_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Kundengesamtumsatz {
+            get {
+                return this.KundengesamtumsatzField;
+            }
+            set {
+                if ((this.KundengesamtumsatzField.Equals(value) != true)) {
+                    this.KundengesamtumsatzField = value;
+                    this.RaisePropertyChanged("Kundengesamtumsatz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kundenname {
+            get {
+                return this.KundennameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KundennameField, value) != true)) {
+                    this.KundennameField = value;
+                    this.RaisePropertyChanged("Kundenname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfVermietungDZ4vHCX7 Vermietung {
+            get {
+                return this.VermietungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VermietungField, value) != true)) {
+                    this.VermietungField = value;
+                    this.RaisePropertyChanged("Vermietung");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ObjectChangeTracker", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class ObjectChangeTracker : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ExtendedPropertiesDictionary ExtendedPropertiesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectsAddedToCollectionProperties ObjectsAddedToCollectionPropertiesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectsRemovedFromCollectionProperties ObjectsRemovedFromCollectionPropertiesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.OriginalValuesDictionary OriginalValuesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectState StateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ExtendedPropertiesDictionary ExtendedProperties {
+            get {
+                return this.ExtendedPropertiesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExtendedPropertiesField, value) != true)) {
+                    this.ExtendedPropertiesField = value;
+                    this.RaisePropertyChanged("ExtendedProperties");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectsAddedToCollectionProperties ObjectsAddedToCollectionProperties {
+            get {
+                return this.ObjectsAddedToCollectionPropertiesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObjectsAddedToCollectionPropertiesField, value) != true)) {
+                    this.ObjectsAddedToCollectionPropertiesField = value;
+                    this.RaisePropertyChanged("ObjectsAddedToCollectionProperties");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectsRemovedFromCollectionProperties ObjectsRemovedFromCollectionProperties {
+            get {
+                return this.ObjectsRemovedFromCollectionPropertiesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObjectsRemovedFromCollectionPropertiesField, value) != true)) {
+                    this.ObjectsRemovedFromCollectionPropertiesField = value;
+                    this.RaisePropertyChanged("ObjectsRemovedFromCollectionProperties");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.OriginalValuesDictionary OriginalValues {
+            get {
+                return this.OriginalValuesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OriginalValuesField, value) != true)) {
+                    this.OriginalValuesField = value;
+                    this.RaisePropertyChanged("OriginalValues");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectState State {
+            get {
+                return this.StateField;
+            }
+            set {
+                if ((this.StateField.Equals(value) != true)) {
+                    this.StateField = value;
+                    this.RaisePropertyChanged("State");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TrackableCollectionOfVermietungDZ4vHCX7", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="Vermietung")]
+    [System.SerializableAttribute()]
+    public class TrackableCollectionOfVermietungDZ4vHCX7 : System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ExtendedPropertiesDictionary", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="ExtendedProperties", KeyName="Name", ValueName="ExtendedProperty")]
     [System.SerializableAttribute()]
     public class ExtendedPropertiesDictionary : System.Collections.Generic.Dictionary<string, object> {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ObjectsAddedToCollectionProperties", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="AddedObjectsForProperty", KeyName="CollectionPropertyName", ValueName="AddedObjects")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ObjectsAddedToCollectionProperties", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="AddedObjectsForProperty", KeyName="CollectionPropertyName", ValueName="AddedObjects")]
     [System.SerializableAttribute()]
     public class ObjectsAddedToCollectionProperties : System.Collections.Generic.Dictionary<string, Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectList> {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ObjectList", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="ObjectValue")]
-    [System.SerializableAttribute()]
-    public class ObjectList : System.Collections.ObjectModel.ObservableCollection<object> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ObjectsRemovedFromCollectionProperties", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="DeletedObjectsForProperty", KeyName="CollectionPropertyName", ValueName="DeletedObjects")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ObjectsRemovedFromCollectionProperties", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="DeletedObjectsForProperty", KeyName="CollectionPropertyName", ValueName="DeletedObjects")]
     [System.SerializableAttribute()]
     public class ObjectsRemovedFromCollectionProperties : System.Collections.Generic.Dictionary<string, Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectList> {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="OriginalValuesDictionary", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="OriginalValues", KeyName="Name", ValueName="OriginalValue")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="OriginalValuesDictionary", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="OriginalValues", KeyName="Name", ValueName="OriginalValue")]
     [System.SerializableAttribute()]
     public class OriginalValuesDictionary : System.Collections.Generic.Dictionary<string, object> {
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TrackableCollectionOfVermietungoSP_SwyHW", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="Vermietung")]
-    [System.SerializableAttribute()]
-    public class TrackableCollectionOfVermietungoSP_SwyHW : System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> {
+    [System.FlagsAttribute()]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ObjectState", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses")]
+    public enum ObjectState : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Unchanged = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Added = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Modified = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Deleted = 8,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TrackableCollectionOfMaschinenartoSP_SwyHW", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="Maschinenart")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ObjectList", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="ObjectValue")]
     [System.SerializableAttribute()]
-    public class TrackableCollectionOfMaschinenartoSP_SwyHW : System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> {
+    public class ObjectList : System.Collections.ObjectModel.ObservableCollection<object> {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TrackableCollectionOfMaschinenkaufoSP_SwyHW", Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" +
-        "", ItemName="Maschinenkauf")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Vermietung", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", IsReference=true)]
     [System.SerializableAttribute()]
-    public class TrackableCollectionOfMaschinenkaufoSP_SwyHW : System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> {
+    public partial class Vermietung : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTrackerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double GesamtpreisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde KundeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Kunden_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfMaschinenartDZ4vHCX7 MaschinenartField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Vermiet_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime VermietbeginField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime VermietendeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTracker {
+            get {
+                return this.ChangeTrackerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChangeTrackerField, value) != true)) {
+                    this.ChangeTrackerField = value;
+                    this.RaisePropertyChanged("ChangeTracker");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Gesamtpreis {
+            get {
+                return this.GesamtpreisField;
+            }
+            set {
+                if ((this.GesamtpreisField.Equals(value) != true)) {
+                    this.GesamtpreisField = value;
+                    this.RaisePropertyChanged("Gesamtpreis");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde Kunde {
+            get {
+                return this.KundeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KundeField, value) != true)) {
+                    this.KundeField = value;
+                    this.RaisePropertyChanged("Kunde");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Kunden_ID {
+            get {
+                return this.Kunden_IDField;
+            }
+            set {
+                if ((this.Kunden_IDField.Equals(value) != true)) {
+                    this.Kunden_IDField = value;
+                    this.RaisePropertyChanged("Kunden_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfMaschinenartDZ4vHCX7 Maschinenart {
+            get {
+                return this.MaschinenartField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaschinenartField, value) != true)) {
+                    this.MaschinenartField = value;
+                    this.RaisePropertyChanged("Maschinenart");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Vermiet_ID {
+            get {
+                return this.Vermiet_IDField;
+            }
+            set {
+                if ((this.Vermiet_IDField.Equals(value) != true)) {
+                    this.Vermiet_IDField = value;
+                    this.RaisePropertyChanged("Vermiet_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Vermietbegin {
+            get {
+                return this.VermietbeginField;
+            }
+            set {
+                if ((this.VermietbeginField.Equals(value) != true)) {
+                    this.VermietbeginField = value;
+                    this.RaisePropertyChanged("Vermietbegin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Vermietende {
+            get {
+                return this.VermietendeField;
+            }
+            set {
+                if ((this.VermietendeField.Equals(value) != true)) {
+                    this.VermietendeField = value;
+                    this.RaisePropertyChanged("Vermietende");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TrackableCollectionOfMaschinenartDZ4vHCX7", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="Maschinenart")]
+    [System.SerializableAttribute()]
+    public class TrackableCollectionOfMaschinenartDZ4vHCX7 : System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Maschinenart", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class Maschinenart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTrackerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GesamteinnahmenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GesamtkostenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfLagerbestandDZ4vHCX7 LagerbestandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Maschinenart_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaschinenartbezeichnungField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfMaschinenkaufDZ4vHCX7 MaschinenkauflisteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double RentabilitätField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TagessatzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int VermietfaktorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfVermietungDZ4vHCX7 VermietungField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTracker {
+            get {
+                return this.ChangeTrackerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChangeTrackerField, value) != true)) {
+                    this.ChangeTrackerField = value;
+                    this.RaisePropertyChanged("ChangeTracker");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Gesamteinnahmen {
+            get {
+                return this.GesamteinnahmenField;
+            }
+            set {
+                if ((this.GesamteinnahmenField.Equals(value) != true)) {
+                    this.GesamteinnahmenField = value;
+                    this.RaisePropertyChanged("Gesamteinnahmen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Gesamtkosten {
+            get {
+                return this.GesamtkostenField;
+            }
+            set {
+                if ((this.GesamtkostenField.Equals(value) != true)) {
+                    this.GesamtkostenField = value;
+                    this.RaisePropertyChanged("Gesamtkosten");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfLagerbestandDZ4vHCX7 Lagerbestand {
+            get {
+                return this.LagerbestandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LagerbestandField, value) != true)) {
+                    this.LagerbestandField = value;
+                    this.RaisePropertyChanged("Lagerbestand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Maschinenart_ID {
+            get {
+                return this.Maschinenart_IDField;
+            }
+            set {
+                if ((this.Maschinenart_IDField.Equals(value) != true)) {
+                    this.Maschinenart_IDField = value;
+                    this.RaisePropertyChanged("Maschinenart_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Maschinenartbezeichnung {
+            get {
+                return this.MaschinenartbezeichnungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaschinenartbezeichnungField, value) != true)) {
+                    this.MaschinenartbezeichnungField = value;
+                    this.RaisePropertyChanged("Maschinenartbezeichnung");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfMaschinenkaufDZ4vHCX7 Maschinenkaufliste {
+            get {
+                return this.MaschinenkauflisteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaschinenkauflisteField, value) != true)) {
+                    this.MaschinenkauflisteField = value;
+                    this.RaisePropertyChanged("Maschinenkaufliste");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Rentabilität {
+            get {
+                return this.RentabilitätField;
+            }
+            set {
+                if ((this.RentabilitätField.Equals(value) != true)) {
+                    this.RentabilitätField = value;
+                    this.RaisePropertyChanged("Rentabilität");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Tagessatz {
+            get {
+                return this.TagessatzField;
+            }
+            set {
+                if ((this.TagessatzField.Equals(value) != true)) {
+                    this.TagessatzField = value;
+                    this.RaisePropertyChanged("Tagessatz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Vermietfaktor {
+            get {
+                return this.VermietfaktorField;
+            }
+            set {
+                if ((this.VermietfaktorField.Equals(value) != true)) {
+                    this.VermietfaktorField = value;
+                    this.RaisePropertyChanged("Vermietfaktor");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.TrackableCollectionOfVermietungDZ4vHCX7 Vermietung {
+            get {
+                return this.VermietungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VermietungField, value) != true)) {
+                    this.VermietungField = value;
+                    this.RaisePropertyChanged("Vermietung");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TrackableCollectionOfLagerbestandDZ4vHCX7", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="Lagerbestand")]
+    [System.SerializableAttribute()]
+    public class TrackableCollectionOfLagerbestandDZ4vHCX7 : System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="TrackableCollectionOfMaschinenkaufDZ4vHCX7", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", ItemName="Maschinenkauf")]
+    [System.SerializableAttribute()]
+    public class TrackableCollectionOfMaschinenkaufDZ4vHCX7 : System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Lagerbestand", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class Lagerbestand : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTrackerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GesamtanzahlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Lagerbestand_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LagermengeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart MaschinenartField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Maschinenart_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int VermietetMengeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTracker {
+            get {
+                return this.ChangeTrackerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChangeTrackerField, value) != true)) {
+                    this.ChangeTrackerField = value;
+                    this.RaisePropertyChanged("ChangeTracker");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Gesamtanzahl {
+            get {
+                return this.GesamtanzahlField;
+            }
+            set {
+                if ((this.GesamtanzahlField.Equals(value) != true)) {
+                    this.GesamtanzahlField = value;
+                    this.RaisePropertyChanged("Gesamtanzahl");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Lagerbestand_ID {
+            get {
+                return this.Lagerbestand_IDField;
+            }
+            set {
+                if ((this.Lagerbestand_IDField.Equals(value) != true)) {
+                    this.Lagerbestand_IDField = value;
+                    this.RaisePropertyChanged("Lagerbestand_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Lagermenge {
+            get {
+                return this.LagermengeField;
+            }
+            set {
+                if ((this.LagermengeField.Equals(value) != true)) {
+                    this.LagermengeField = value;
+                    this.RaisePropertyChanged("Lagermenge");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart Maschinenart {
+            get {
+                return this.MaschinenartField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaschinenartField, value) != true)) {
+                    this.MaschinenartField = value;
+                    this.RaisePropertyChanged("Maschinenart");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Maschinenart_ID {
+            get {
+                return this.Maschinenart_IDField;
+            }
+            set {
+                if ((this.Maschinenart_IDField.Equals(value) != true)) {
+                    this.Maschinenart_IDField = value;
+                    this.RaisePropertyChanged("Maschinenart_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int VermietetMenge {
+            get {
+                return this.VermietetMengeField;
+            }
+            set {
+                if ((this.VermietetMengeField.Equals(value) != true)) {
+                    this.VermietetMengeField = value;
+                    this.RaisePropertyChanged("VermietetMenge");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Maschinenkauf", Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataC" +
+        "lasses", IsReference=true)]
+    [System.SerializableAttribute()]
+    public partial class Maschinenkauf : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AnzahlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTrackerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EinzelpreisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime KaufdatumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Maschinenart_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart MaschinenartenlisteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Maschinenkauf_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double RechnungspreisField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Anzahl {
+            get {
+                return this.AnzahlField;
+            }
+            set {
+                if ((this.AnzahlField.Equals(value) != true)) {
+                    this.AnzahlField = value;
+                    this.RaisePropertyChanged("Anzahl");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.ObjectChangeTracker ChangeTracker {
+            get {
+                return this.ChangeTrackerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChangeTrackerField, value) != true)) {
+                    this.ChangeTrackerField = value;
+                    this.RaisePropertyChanged("ChangeTracker");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Einzelpreis {
+            get {
+                return this.EinzelpreisField;
+            }
+            set {
+                if ((this.EinzelpreisField.Equals(value) != true)) {
+                    this.EinzelpreisField = value;
+                    this.RaisePropertyChanged("Einzelpreis");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Kaufdatum {
+            get {
+                return this.KaufdatumField;
+            }
+            set {
+                if ((this.KaufdatumField.Equals(value) != true)) {
+                    this.KaufdatumField = value;
+                    this.RaisePropertyChanged("Kaufdatum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Maschinenart_ID {
+            get {
+                return this.Maschinenart_IDField;
+            }
+            set {
+                if ((this.Maschinenart_IDField.Equals(value) != true)) {
+                    this.Maschinenart_IDField = value;
+                    this.RaisePropertyChanged("Maschinenart_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart Maschinenartenliste {
+            get {
+                return this.MaschinenartenlisteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaschinenartenlisteField, value) != true)) {
+                    this.MaschinenartenlisteField = value;
+                    this.RaisePropertyChanged("Maschinenartenliste");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Maschinenkauf_ID {
+            get {
+                return this.Maschinenkauf_IDField;
+            }
+            set {
+                if ((this.Maschinenkauf_IDField.Equals(value) != true)) {
+                    this.Maschinenkauf_IDField = value;
+                    this.RaisePropertyChanged("Maschinenkauf_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Rechnungspreis {
+            get {
+                return this.RechnungspreisField;
+            }
+            set {
+                if ((this.RechnungspreisField.Equals(value) != true)) {
+                    this.RechnungspreisField = value;
+                    this.RaisePropertyChanged("Rechnungspreis");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -85,18 +996,31 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/Call", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/CallResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAntwort Call(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/Call", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/CallResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAntwort> CallAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetKundeByIdAnfrage) von Nachricht "GetKundeByIdAnfrage" nicht mit dem Standardwert (GetKundeById) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetKundeById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetKundeByIdResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAntwort GetKundeById(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetKundeById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetKundeByIdResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAntwort> GetKundeByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllKundenAnfrage) von Nachricht "GetAllKundenAnfrage" nicht mit dem Standardwert (GetAllKunden) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllKunden", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllKundenResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAntwort GetAllKunden(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllKunden", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllKundenResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAntwort> GetAllKundenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetLagerbestandByIdAnfrage) von Nachricht "GetLagerbestandByIdAnfrage" nicht mit dem Standardwert (GetLagerbestandById) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandByIdRe" +
             "sponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAntwort GetLagerbestandById(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandByIdRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAntwort> GetLagerbestandByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllLagerbestandlistenAnfrage) von Nachricht "GetAllLagerbestandlistenAnfrage" nicht mit dem Standardwert (GetAllLagerbestandlisten) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllLagerbestandlis" +
@@ -104,11 +1028,21 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "tenResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAntwort GetAllLagerbestandlisten(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllLagerbestandlis" +
+            "ten", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllLagerbestandlis" +
+            "tenResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAntwort> GetAllLagerbestandlistenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetLagerbestandByMaschinenartenIdAnfrage) von Nachricht "GetLagerbestandByMaschinenartenIdAnfrage" nicht mit dem Standardwert (GetLagerbestandByMaschinenartenId) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandByMasc" +
             "hinenartenId", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandByMasc" +
             "hinenartenIdResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAntwort GetLagerbestandByMaschinenartenId(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandByMasc" +
+            "hinenartenId", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandByMasc" +
+            "hinenartenIdResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAntwort> GetLagerbestandByMaschinenartenIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetLagerbestandVorhandenAnfrage) von Nachricht "GetLagerbestandVorhandenAnfrage" nicht mit dem Standardwert (GetLagerbestandVorhanden) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVorhan" +
@@ -116,10 +1050,19 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "denResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAntwort GetLagerbestandVorhanden(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVorhan" +
+            "den", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVorhan" +
+            "denResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAntwort> GetLagerbestandVorhandenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetLagerbestandLeerAnfrage) von Nachricht "GetLagerbestandLeerAnfrage" nicht mit dem Standardwert (GetLagerbestandLeer) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandLeer", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandLeerRe" +
             "sponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAntwort GetLagerbestandLeer(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandLeer", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandLeerRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAntwort> GetLagerbestandLeerAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetLagerbestandNichtsVermietetAnfrage) von Nachricht "GetLagerbestandNichtsVermietetAnfrage" nicht mit dem Standardwert (GetLagerbestandNichtsVermietet) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichts" +
@@ -127,11 +1070,21 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "VermietetResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAntwort GetLagerbestandNichtsVermietet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichts" +
+            "Vermietet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichts" +
+            "VermietetResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAntwort> GetLagerbestandNichtsVermietetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetLagerbestandVermietetAnfrage) von Nachricht "GetLagerbestandVermietetAnfrage" nicht mit dem Standardwert (GetLagerbestandVermietet) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVermie" +
             "tet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVermie" +
             "tetResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAntwort GetLagerbestandVermietet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVermie" +
+            "tet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVermie" +
+            "tetResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAntwort> GetLagerbestandVermietetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetLagerbestandNichtImPoolAnfrage) von Nachricht "GetLagerbestandNichtImPoolAnfrage" nicht mit dem Standardwert (GetLagerbestandNichtImPool) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichtI" +
@@ -139,15 +1092,28 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "mPoolResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAntwort GetLagerbestandNichtImPool(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichtI" +
+            "mPool", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichtI" +
+            "mPoolResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAntwort> GetLagerbestandNichtImPoolAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetMaschinenarteByIdAnfrage) von Nachricht "GetMaschinenarteByIdAnfrage" nicht mit dem Standardwert (GetMaschinenarteById) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenarteById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenarteByIdR" +
             "esponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAntwort GetMaschinenarteById(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenarteById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenarteByIdR" +
+            "esponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAntwort> GetMaschinenarteByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllMaschinenartenAnfrage) von Nachricht "GetAllMaschinenartenAnfrage" nicht mit dem Standardwert (GetAllMaschinenarten) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenarten", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenR" +
             "esponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAntwort GetAllMaschinenarten(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenarten", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenR" +
+            "esponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAntwort> GetAllMaschinenartenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllMaschinenartenIstRentabelAnfrage) von Nachricht "GetAllMaschinenartenIstRentabelAnfrage" nicht mit dem Standardwert (GetAllMaschinenartenIstRentabel) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenI" +
@@ -155,21 +1121,39 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "stRentabelResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAntwort GetAllMaschinenartenIstRentabel(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenI" +
+            "stRentabel", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenI" +
+            "stRentabelResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAntwort> GetAllMaschinenartenIstRentabelAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllMaschinenartenIstUnrentabelAnfrage) von Nachricht "GetAllMaschinenartenIstUnrentabelAnfrage" nicht mit dem Standardwert (GetAllMaschinenartenIstUnrentabel) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenI" +
             "stUnrentabel", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenI" +
             "stUnrentabelResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAntwort GetAllMaschinenartenIstUnrentabel(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenI" +
+            "stUnrentabel", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenI" +
+            "stUnrentabelResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAntwort> GetAllMaschinenartenIstUnrentabelAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetMaschinenkaufByIdAnfrage) von Nachricht "GetMaschinenkaufByIdAnfrage" nicht mit dem Standardwert (GetMaschinenkaufById) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenkaufById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenkaufByIdR" +
             "esponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAntwort GetMaschinenkaufById(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenkaufById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenkaufByIdR" +
+            "esponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAntwort> GetMaschinenkaufByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllMaschinenkaufeAnfrage) von Nachricht "GetAllMaschinenkaufeAnfrage" nicht mit dem Standardwert (GetAllMaschinenkaufe) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufe", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeR" +
             "esponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAntwort GetAllMaschinenkaufe(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufe", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeR" +
+            "esponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAntwort> GetAllMaschinenkaufeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllMaschinenkaufeByMaschinenartAnfrage) von Nachricht "GetAllMaschinenkaufeByMaschinenartAnfrage" nicht mit dem Standardwert (GetAllMaschinenkaufeByMaschinenart) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeB" +
@@ -177,11 +1161,21 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "yMaschinenartResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAntwort GetAllMaschinenkaufeByMaschinenart(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeB" +
+            "yMaschinenart", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeB" +
+            "yMaschinenartResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAntwort> GetAllMaschinenkaufeByMaschinenartAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllMaschinenkaufeByDateAnfrage) von Nachricht "GetAllMaschinenkaufeByDateAnfrage" nicht mit dem Standardwert (GetAllMaschinenkaufeByDate) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeB" +
             "yDate", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeB" +
             "yDateResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAntwort GetAllMaschinenkaufeByDate(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeB" +
+            "yDate", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeB" +
+            "yDateResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAntwort> GetAllMaschinenkaufeByDateAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllMaschinenkaufeInZeitraumAnfrage) von Nachricht "GetAllMaschinenkaufeInZeitraumAnfrage" nicht mit dem Standardwert (GetAllMaschinenkaufeInZeitraum) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeI" +
@@ -189,15 +1183,28 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "nZeitraumResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAntwort GetAllMaschinenkaufeInZeitraum(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeI" +
+            "nZeitraum", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeI" +
+            "nZeitraumResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAntwort> GetAllMaschinenkaufeInZeitraumAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetVermietungByIdAnfrage) von Nachricht "GetVermietungByIdAnfrage" nicht mit dem Standardwert (GetVermietungById) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungByIdResp" +
             "onse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAntwort GetVermietungById(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungById", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungByIdResp" +
+            "onse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAntwort> GetVermietungByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetAllVermietungenAnfrage) von Nachricht "GetAllVermietungenAnfrage" nicht mit dem Standardwert (GetAllVermietungen) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllVermietungen", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllVermietungenRes" +
             "ponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAntwort GetAllVermietungen(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllVermietungen", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllVermietungenRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAntwort> GetAllVermietungenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetVermietungenInZeitraumAnfrage) von Nachricht "GetVermietungenInZeitraumAnfrage" nicht mit dem Standardwert (GetVermietungenInZeitraum) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenInZeit" +
@@ -205,30 +1212,55 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "raumResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAntwort GetVermietungenInZeitraum(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenInZeit" +
+            "raum", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenInZeit" +
+            "raumResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAntwort> GetVermietungenInZeitraumAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (GetVermietungenAnKundeAnfrage) von Nachricht "GetVermietungenAnKundeAnfrage" nicht mit dem Standardwert (GetVermietungenAnKunde) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenAnKund" +
             "e", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenAnKund" +
             "eResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAntwort GetVermietungenAnKunde(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenAnKund" +
+            "e", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenAnKund" +
+            "eResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAntwort> GetVermietungenAnKundeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (NuerKundeAnfrage) von Nachricht "NuerKundeAnfrage" nicht mit dem Standardwert (NuerKunde) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerKunde", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerKundeResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAntwort NuerKunde(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerKunde", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerKundeResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAntwort> NuerKundeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (NuerLagerplatzAnfrage) von Nachricht "NuerLagerplatzAnfrage" nicht mit dem Standardwert (NuerLagerplatz) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerLagerplatz", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerLagerplatzRespons" +
             "e")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAntwort NuerLagerplatz(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerLagerplatz", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerLagerplatzRespons" +
+            "e")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAntwort> NuerLagerplatzAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (NeueMaschinenartAnfrage) von Nachricht "NeueMaschinenartAnfrage" nicht mit dem Standardwert (NeueMaschinenart) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueMaschinenart", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueMaschinenartRespo" +
             "nse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAntwort NeueMaschinenart(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueMaschinenart", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueMaschinenartRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAntwort> NeueMaschinenartAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (NeuMaschinenkaufAnfrage) von Nachricht "NeuMaschinenkaufAnfrage" nicht mit dem Standardwert (NeuMaschinenkauf) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeuMaschinenkauf", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeuMaschinenkaufRespo" +
             "nse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAntwort NeuMaschinenkauf(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeuMaschinenkauf", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeuMaschinenkaufRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAntwort> NeuMaschinenkaufAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage request);
         
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (NeueVermietungAnKundenAnfrage) von Nachricht "NeueVermietungAnKundenAnfrage" nicht mit dem Standardwert (NeueVermietungAnKunden) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueVermietungAnKunde" +
@@ -236,35 +1268,64 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             "nResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAntwort NeueVermietungAnKunden(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueVermietungAnKunde" +
+            "n", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueVermietungAnKunde" +
+            "nResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAntwort> NeueVermietungAnKundenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage request);
+        
         // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (MaterialAnVermietungAnfügenAnfrage) von Nachricht "MaterialAnVermietungAnfügenAnfrage" nicht mit dem Standardwert (MaterialAnVermietungAnfügen) übereinstimmt.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/MaterialAnVermietungA" +
             "nfügen", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/MaterialAnVermietungA" +
             "nfügenResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAntwort MaterialAnVermietungAnfügen(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage request);
         
-        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (SaveKundenSetAnfrage) von Nachricht "SaveKundenSetAnfrage" nicht mit dem Standardwert (SaveKundenSet) übereinstimmt.
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/MaterialAnVermietungA" +
+            "nfügen", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/MaterialAnVermietungA" +
+            "nfügenResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAntwort> MaterialAnVermietungAnfügenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveKundenSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveKundenSetResponse" +
             "")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAntwort SaveKundenSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAnfrage request);
         
-        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (SaveLagerSetAnfrage) von Nachricht "SaveLagerSetAnfrage" nicht mit dem Standardwert (SaveLagerSet) übereinstimmt.
+        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Vorgang mehrere Rückgabewerte aufweist.
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveKundenSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveKundenSetResponse" +
+            "")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAntwort> SaveKundenSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAnfrage request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveLagerSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveLagerSetResponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAntwort SaveLagerSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAnfrage request);
         
-        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (SaveMaschinenartSetAnfrage) von Nachricht "SaveMaschinenartSetAnfrage" nicht mit dem Standardwert (SaveMaschinenartSet) übereinstimmt.
+        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Vorgang mehrere Rückgabewerte aufweist.
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveLagerSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveLagerSetResponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAntwort> SaveLagerSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAnfrage request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenartSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenartSetRe" +
             "sponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAntwort SaveMaschinenartSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAnfrage request);
         
-        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (SaveMaschinenkaufeAnfrage) von Nachricht "SaveMaschinenkaufeAnfrage" nicht mit dem Standardwert (SaveMaschinenkaufe) übereinstimmt.
+        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Vorgang mehrere Rückgabewerte aufweist.
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenartSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenartSetRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAntwort> SaveMaschinenartSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAnfrage request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenkaufe", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenkaufeRes" +
             "ponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAntwort SaveMaschinenkaufe(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAnfrage request);
         
-        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappername (SaveVermitungenSetAnfrage) von Nachricht "SaveVermitungenSetAnfrage" nicht mit dem Standardwert (SaveVermitungenSet) übereinstimmt.
+        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Vorgang mehrere Rückgabewerte aufweist.
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenkaufe", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenkaufeRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAntwort> SaveMaschinenkaufeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAnfrage request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveVermitungenSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveVermitungenSetRes" +
             "ponse")]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAntwort SaveVermitungenSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAnfrage request);
+        
+        // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Vorgang mehrere Rückgabewerte aufweist.
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveVermitungenSet", ReplyAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveVermitungenSetRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAntwort> SaveVermitungenSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAnfrage request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -325,12 +1386,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetKundeByIdAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Kunde Kunde;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde Kunde;
         
         public GetKundeByIdAntwort() {
         }
         
-        public GetKundeByIdAntwort(Crosscutting.MietmaterialdatenbankKlassen.Kunde Kunde) {
+        public GetKundeByIdAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde Kunde) {
             this.Kunde = Kunde;
         }
     }
@@ -352,12 +1413,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllKundenAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> Kunden;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> Kunden;
         
         public GetAllKundenAntwort() {
         }
         
-        public GetAllKundenAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> Kunden) {
+        public GetAllKundenAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> Kunden) {
             this.Kunden = Kunden;
         }
     }
@@ -386,12 +1447,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetLagerbestandByIdAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand Lager;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand Lager;
         
         public GetLagerbestandByIdAntwort() {
         }
         
-        public GetLagerbestandByIdAntwort(Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand Lager) {
+        public GetLagerbestandByIdAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand Lager) {
             this.Lager = Lager;
         }
     }
@@ -413,12 +1474,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllLagerbestandlistenAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager;
         
         public GetAllLagerbestandlistenAntwort() {
         }
         
-        public GetAllLagerbestandlistenAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager) {
+        public GetAllLagerbestandlistenAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager) {
             this.Lager = Lager;
         }
     }
@@ -447,12 +1508,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetLagerbestandByMaschinenartenIdAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand Lager;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand Lager;
         
         public GetLagerbestandByMaschinenartenIdAntwort() {
         }
         
-        public GetLagerbestandByMaschinenartenIdAntwort(Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand Lager) {
+        public GetLagerbestandByMaschinenartenIdAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand Lager) {
             this.Lager = Lager;
         }
     }
@@ -474,12 +1535,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetLagerbestandVorhandenAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager;
         
         public GetLagerbestandVorhandenAntwort() {
         }
         
-        public GetLagerbestandVorhandenAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager) {
+        public GetLagerbestandVorhandenAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager) {
             this.Lager = Lager;
         }
     }
@@ -501,12 +1562,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetLagerbestandLeerAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager;
         
         public GetLagerbestandLeerAntwort() {
         }
         
-        public GetLagerbestandLeerAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager) {
+        public GetLagerbestandLeerAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager) {
             this.Lager = Lager;
         }
     }
@@ -528,12 +1589,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetLagerbestandNichtsVermietetAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager;
         
         public GetLagerbestandNichtsVermietetAntwort() {
         }
         
-        public GetLagerbestandNichtsVermietetAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager) {
+        public GetLagerbestandNichtsVermietetAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager) {
             this.Lager = Lager;
         }
     }
@@ -555,12 +1616,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetLagerbestandVermietetAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager;
         
         public GetLagerbestandVermietetAntwort() {
         }
         
-        public GetLagerbestandVermietetAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager) {
+        public GetLagerbestandVermietetAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager) {
             this.Lager = Lager;
         }
     }
@@ -582,12 +1643,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetLagerbestandNichtImPoolAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager;
         
         public GetLagerbestandNichtImPoolAntwort() {
         }
         
-        public GetLagerbestandNichtImPoolAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> Lager) {
+        public GetLagerbestandNichtImPoolAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> Lager) {
             this.Lager = Lager;
         }
     }
@@ -616,12 +1677,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetMaschinenarteByIdAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenart Maschinenart;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart Maschinenart;
         
         public GetMaschinenarteByIdAntwort() {
         }
         
-        public GetMaschinenarteByIdAntwort(Crosscutting.MietmaterialdatenbankKlassen.Maschinenart Maschinenart) {
+        public GetMaschinenarteByIdAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart Maschinenart) {
             this.Maschinenart = Maschinenart;
         }
     }
@@ -643,12 +1704,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllMaschinenartenAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> Maschinenart;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> Maschinenart;
         
         public GetAllMaschinenartenAntwort() {
         }
         
-        public GetAllMaschinenartenAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> Maschinenart) {
+        public GetAllMaschinenartenAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> Maschinenart) {
             this.Maschinenart = Maschinenart;
         }
     }
@@ -670,12 +1731,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllMaschinenartenIstRentabelAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> Maschinenart;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> Maschinenart;
         
         public GetAllMaschinenartenIstRentabelAntwort() {
         }
         
-        public GetAllMaschinenartenIstRentabelAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> Maschinenart) {
+        public GetAllMaschinenartenIstRentabelAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> Maschinenart) {
             this.Maschinenart = Maschinenart;
         }
     }
@@ -697,12 +1758,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllMaschinenartenIstUnrentabelAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> Maschinenart;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> Maschinenart;
         
         public GetAllMaschinenartenIstUnrentabelAntwort() {
         }
         
-        public GetAllMaschinenartenIstUnrentabelAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> Maschinenart) {
+        public GetAllMaschinenartenIstUnrentabelAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> Maschinenart) {
             this.Maschinenart = Maschinenart;
         }
     }
@@ -731,12 +1792,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetMaschinenkaufByIdAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf Maschinenkauf;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf Maschinenkauf;
         
         public GetMaschinenkaufByIdAntwort() {
         }
         
-        public GetMaschinenkaufByIdAntwort(Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf Maschinenkauf) {
+        public GetMaschinenkaufByIdAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf Maschinenkauf) {
             this.Maschinenkauf = Maschinenkauf;
         }
     }
@@ -758,12 +1819,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllMaschinenkaufeAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf;
         
         public GetAllMaschinenkaufeAntwort() {
         }
         
-        public GetAllMaschinenkaufeAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf) {
+        public GetAllMaschinenkaufeAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf) {
             this.Maschinenkauf = Maschinenkauf;
         }
     }
@@ -792,12 +1853,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllMaschinenkaufeByMaschinenartAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf;
         
         public GetAllMaschinenkaufeByMaschinenartAntwort() {
         }
         
-        public GetAllMaschinenkaufeByMaschinenartAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf) {
+        public GetAllMaschinenkaufeByMaschinenartAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf) {
             this.Maschinenkauf = Maschinenkauf;
         }
     }
@@ -826,12 +1887,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllMaschinenkaufeByDateAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf;
         
         public GetAllMaschinenkaufeByDateAntwort() {
         }
         
-        public GetAllMaschinenkaufeByDateAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf) {
+        public GetAllMaschinenkaufeByDateAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf) {
             this.Maschinenkauf = Maschinenkauf;
         }
     }
@@ -864,12 +1925,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllMaschinenkaufeInZeitraumAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf;
         
         public GetAllMaschinenkaufeInZeitraumAntwort() {
         }
         
-        public GetAllMaschinenkaufeInZeitraumAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> Maschinenkauf) {
+        public GetAllMaschinenkaufeInZeitraumAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> Maschinenkauf) {
             this.Maschinenkauf = Maschinenkauf;
         }
     }
@@ -898,12 +1959,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetVermietungByIdAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Vermietung Vermietung;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung Vermietung;
         
         public GetVermietungByIdAntwort() {
         }
         
-        public GetVermietungByIdAntwort(Crosscutting.MietmaterialdatenbankKlassen.Vermietung Vermietung) {
+        public GetVermietungByIdAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung Vermietung) {
             this.Vermietung = Vermietung;
         }
     }
@@ -925,12 +1986,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetAllVermietungenAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> Vermietung;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> Vermietung;
         
         public GetAllVermietungenAntwort() {
         }
         
-        public GetAllVermietungenAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> Vermietung) {
+        public GetAllVermietungenAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> Vermietung) {
             this.Vermietung = Vermietung;
         }
     }
@@ -963,12 +2024,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetVermietungenInZeitraumAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> Vermietung;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> Vermietung;
         
         public GetVermietungenInZeitraumAntwort() {
         }
         
-        public GetVermietungenInZeitraumAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> Vermietung) {
+        public GetVermietungenInZeitraumAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> Vermietung) {
             this.Vermietung = Vermietung;
         }
     }
@@ -997,12 +2058,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class GetVermietungenAnKundeAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> Vermietung;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> Vermietung;
         
         public GetVermietungenAnKundeAntwort() {
         }
         
-        public GetVermietungenAnKundeAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> Vermietung) {
+        public GetVermietungenAnKundeAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> Vermietung) {
             this.Vermietung = Vermietung;
         }
     }
@@ -1031,12 +2092,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class NuerKundeAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Kunde Kunde;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde Kunde;
         
         public NuerKundeAntwort() {
         }
         
-        public NuerKundeAntwort(Crosscutting.MietmaterialdatenbankKlassen.Kunde Kunde) {
+        public NuerKundeAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde Kunde) {
             this.Kunde = Kunde;
         }
     }
@@ -1065,12 +2126,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class NuerLagerplatzAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand Lagerbestand;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand Lagerbestand;
         
         public NuerLagerplatzAntwort() {
         }
         
-        public NuerLagerplatzAntwort(Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand Lagerbestand) {
+        public NuerLagerplatzAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand Lagerbestand) {
             this.Lagerbestand = Lagerbestand;
         }
     }
@@ -1099,12 +2160,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class NeueMaschinenartAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenart Maschinenart;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart Maschinenart;
         
         public NeueMaschinenartAntwort() {
         }
         
-        public NeueMaschinenartAntwort(Crosscutting.MietmaterialdatenbankKlassen.Maschinenart Maschinenart) {
+        public NeueMaschinenartAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart Maschinenart) {
             this.Maschinenart = Maschinenart;
         }
     }
@@ -1145,12 +2206,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class NeuMaschinenkaufAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf Maschinenkauf;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf Maschinenkauf;
         
         public NeuMaschinenkaufAntwort() {
         }
         
-        public NeuMaschinenkaufAntwort(Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf Maschinenkauf) {
+        public NeuMaschinenkaufAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf Maschinenkauf) {
             this.Maschinenkauf = Maschinenkauf;
         }
     }
@@ -1187,12 +2248,12 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class NeueVermietungAnKundenAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Vermietung NeueVermietungAnKunden;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung NeueVermietungAnKunden;
         
         public NeueVermietungAnKundenAntwort() {
         }
         
-        public NeueVermietungAnKundenAntwort(Crosscutting.MietmaterialdatenbankKlassen.Vermietung NeueVermietungAnKunden) {
+        public NeueVermietungAnKundenAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung NeueVermietungAnKunden) {
             this.NeueVermietungAnKunden = NeueVermietungAnKunden;
         }
     }
@@ -1225,41 +2286,39 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     public partial class MaterialAnVermietungAnfügenAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public Crosscutting.MietmaterialdatenbankKlassen.Vermietung MaterialAnVermietungAnfügen;
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung MaterialAnVermietungAnfügen;
         
         public MaterialAnVermietungAnfügenAntwort() {
         }
         
-        public MaterialAnVermietungAnfügenAntwort(Crosscutting.MietmaterialdatenbankKlassen.Vermietung MaterialAnVermietungAnfügen) {
+        public MaterialAnVermietungAnfügenAntwort(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung MaterialAnVermietungAnfügen) {
             this.MaterialAnVermietungAnfügen = MaterialAnVermietungAnfügen;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveKundenSetAnfrage", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveKundenSetAnfrage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> NeueKunden;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> NeueKunden;
         
         public SaveKundenSetAnfrage() {
         }
         
-        public SaveKundenSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> NeueKunden) {
+        public SaveKundenSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> NeueKunden) {
             this.NeueKunden = NeueKunden;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveKundenSetAntwort", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveKundenSetAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> NeueKunden;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> NeueKunden;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=1)]
         public string Statistik;
@@ -1267,7 +2326,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         public SaveKundenSetAntwort() {
         }
         
-        public SaveKundenSetAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> NeueKunden, string Statistik) {
+        public SaveKundenSetAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> NeueKunden, string Statistik) {
             this.NeueKunden = NeueKunden;
             this.Statistik = Statistik;
         }
@@ -1275,29 +2334,27 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveLagerSetAnfrage", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveLagerSetAnfrage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> NeueLagerbestaende;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> NeueLagerbestaende;
         
         public SaveLagerSetAnfrage() {
         }
         
-        public SaveLagerSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> NeueLagerbestaende) {
+        public SaveLagerSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> NeueLagerbestaende) {
             this.NeueLagerbestaende = NeueLagerbestaende;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveLagerSetAntwort", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveLagerSetAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> NeueLagerbestaende;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> NeueLagerbestaende;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=1)]
         public string Statistik;
@@ -1305,7 +2362,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         public SaveLagerSetAntwort() {
         }
         
-        public SaveLagerSetAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> NeueLagerbestaende, string Statistik) {
+        public SaveLagerSetAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> NeueLagerbestaende, string Statistik) {
             this.NeueLagerbestaende = NeueLagerbestaende;
             this.Statistik = Statistik;
         }
@@ -1313,29 +2370,27 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveMaschinenartSetAnfrage", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveMaschinenartSetAnfrage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> NeueMaschinenarten;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> NeueMaschinenarten;
         
         public SaveMaschinenartSetAnfrage() {
         }
         
-        public SaveMaschinenartSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> NeueMaschinenarten) {
+        public SaveMaschinenartSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> NeueMaschinenarten) {
             this.NeueMaschinenarten = NeueMaschinenarten;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveMaschinenartSetAntwort", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveMaschinenartSetAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> NeueMaschinenarten;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> NeueMaschinenarten;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=1)]
         public string Statistik;
@@ -1343,7 +2398,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         public SaveMaschinenartSetAntwort() {
         }
         
-        public SaveMaschinenartSetAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> NeueMaschinenarten, string Statistik) {
+        public SaveMaschinenartSetAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> NeueMaschinenarten, string Statistik) {
             this.NeueMaschinenarten = NeueMaschinenarten;
             this.Statistik = Statistik;
         }
@@ -1351,29 +2406,27 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveMaschinenkaufeAnfrage", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveMaschinenkaufeAnfrage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> NeueMaschinenkaufe;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> NeueMaschinenkaufe;
         
         public SaveMaschinenkaufeAnfrage() {
         }
         
-        public SaveMaschinenkaufeAnfrage(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> NeueMaschinenkaufe) {
+        public SaveMaschinenkaufeAnfrage(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> NeueMaschinenkaufe) {
             this.NeueMaschinenkaufe = NeueMaschinenkaufe;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveMaschinenkaufeAntwort", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveMaschinenkaufeAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> NeueMaschinenkaufe;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> NeueMaschinenkaufe;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=1)]
         public string Statistik;
@@ -1381,7 +2434,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         public SaveMaschinenkaufeAntwort() {
         }
         
-        public SaveMaschinenkaufeAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> NeueMaschinenkaufe, string Statistik) {
+        public SaveMaschinenkaufeAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> NeueMaschinenkaufe, string Statistik) {
             this.NeueMaschinenkaufe = NeueMaschinenkaufe;
             this.Statistik = Statistik;
         }
@@ -1389,29 +2442,27 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveVermitungenSetAnfrage", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveVermitungenSetAnfrage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> NeueVermietungen;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> NeueVermietungen;
         
         public SaveVermitungenSetAnfrage() {
         }
         
-        public SaveVermitungenSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> NeueVermietungen) {
+        public SaveVermitungenSetAnfrage(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> NeueVermietungen) {
             this.NeueVermietungen = NeueVermietungen;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="SaveVermitungenSetAntwort", WrapperNamespace="http://www.Baumaschinenmietservice.de/Services", IsWrapped=true)]
     public partial class SaveVermitungenSetAntwort {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=0)]
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> NeueVermietungen;
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> NeueVermietungen;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.Baumaschinenmietservice.de/Services", Order=1)]
         public string Statistik;
@@ -1419,7 +2470,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         public SaveVermitungenSetAntwort() {
         }
         
-        public SaveVermitungenSetAntwort(System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> NeueVermietungen, string Statistik) {
+        public SaveVermitungenSetAntwort(System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> NeueVermietungen, string Statistik) {
             this.NeueVermietungen = NeueVermietungen;
             this.Statistik = Statistik;
         }
@@ -1465,11 +2516,22 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.CallAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAnfrage request) {
+            return base.Channel.CallAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAntwort> CallAsync(string ClientName) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetCallAnfrage();
+            inValue.ClientName = ClientName;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).CallAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetKundeById(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage request) {
             return base.Channel.GetKundeById(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Kunde GetKundeById(int KundenID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde GetKundeById(int KundenID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage();
             inValue.KundenID = KundenID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetKundeById(inValue);
@@ -1477,14 +2539,35 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetKundeByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage request) {
+            return base.Channel.GetKundeByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAntwort> GetKundeByIdAsync(int KundenID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetKundeByIdAnfrage();
+            inValue.KundenID = KundenID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetKundeByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllKunden(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage request) {
             return base.Channel.GetAllKunden(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> GetAllKunden() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> GetAllKunden() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllKunden(inValue);
             return retVal.Kunden;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllKundenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage request) {
+            return base.Channel.GetAllKundenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAntwort> GetAllKundenAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllKundenAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllKundenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1492,7 +2575,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetLagerbestandById(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand GetLagerbestandById(int LagerID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand GetLagerbestandById(int LagerID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAnfrage();
             inValue.LagerID = LagerID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandById(inValue);
@@ -1500,14 +2583,35 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAnfrage request) {
+            return base.Channel.GetLagerbestandByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAntwort> GetLagerbestandByIdAsync(int LagerID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByIdAnfrage();
+            inValue.LagerID = LagerID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllLagerbestandlisten(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage request) {
             return base.Channel.GetAllLagerbestandlisten(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> GetAllLagerbestandlisten() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> GetAllLagerbestandlisten() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllLagerbestandlisten(inValue);
             return retVal.Lager;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllLagerbestandlistenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage request) {
+            return base.Channel.GetAllLagerbestandlistenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAntwort> GetAllLagerbestandlistenAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllLagerbestandlistenAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllLagerbestandlistenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1515,7 +2619,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetLagerbestandByMaschinenartenId(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand GetLagerbestandByMaschinenartenId(int MaschinenartID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand GetLagerbestandByMaschinenartenId(int MaschinenartID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAnfrage();
             inValue.MaschinenartID = MaschinenartID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandByMaschinenartenId(inValue);
@@ -1523,14 +2627,35 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandByMaschinenartenIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAnfrage request) {
+            return base.Channel.GetLagerbestandByMaschinenartenIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAntwort> GetLagerbestandByMaschinenartenIdAsync(int MaschinenartID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandByMaschinenartenIdAnfrage();
+            inValue.MaschinenartID = MaschinenartID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandByMaschinenartenIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandVorhanden(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage request) {
             return base.Channel.GetLagerbestandVorhanden(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> GetLagerbestandVorhanden() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> GetLagerbestandVorhanden() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandVorhanden(inValue);
             return retVal.Lager;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandVorhandenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage request) {
+            return base.Channel.GetLagerbestandVorhandenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAntwort> GetLagerbestandVorhandenAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVorhandenAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandVorhandenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1538,10 +2663,20 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetLagerbestandLeer(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> GetLagerbestandLeer() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> GetLagerbestandLeer() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandLeer(inValue);
             return retVal.Lager;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandLeerAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAnfrage request) {
+            return base.Channel.GetLagerbestandLeerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAntwort> GetLagerbestandLeerAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandLeerAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandLeerAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1549,10 +2684,20 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetLagerbestandNichtsVermietet(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> GetLagerbestandNichtsVermietet() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> GetLagerbestandNichtsVermietet() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandNichtsVermietet(inValue);
             return retVal.Lager;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandNichtsVermietetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAnfrage request) {
+            return base.Channel.GetLagerbestandNichtsVermietetAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAntwort> GetLagerbestandNichtsVermietetAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtsVermietetAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandNichtsVermietetAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1560,10 +2705,20 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetLagerbestandVermietet(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> GetLagerbestandVermietet() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> GetLagerbestandVermietet() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandVermietet(inValue);
             return retVal.Lager;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandVermietetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAnfrage request) {
+            return base.Channel.GetLagerbestandVermietetAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAntwort> GetLagerbestandVermietetAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandVermietetAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandVermietetAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1571,10 +2726,20 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetLagerbestandNichtImPool(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> GetLagerbestandNichtImPool() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> GetLagerbestandNichtImPool() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandNichtImPool(inValue);
             return retVal.Lager;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetLagerbestandNichtImPoolAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAnfrage request) {
+            return base.Channel.GetLagerbestandNichtImPoolAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAntwort> GetLagerbestandNichtImPoolAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetLagerbestandNichtImPoolAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetLagerbestandNichtImPoolAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1582,7 +2747,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetMaschinenarteById(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenart GetMaschinenarteById(int MaschinenartID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart GetMaschinenarteById(int MaschinenartID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAnfrage();
             inValue.MaschinenartID = MaschinenartID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetMaschinenarteById(inValue);
@@ -1590,14 +2755,35 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetMaschinenarteByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAnfrage request) {
+            return base.Channel.GetMaschinenarteByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAntwort> GetMaschinenarteByIdAsync(int MaschinenartID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenarteByIdAnfrage();
+            inValue.MaschinenartID = MaschinenartID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetMaschinenarteByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenarten(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage request) {
             return base.Channel.GetAllMaschinenarten(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> GetAllMaschinenarten() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> GetAllMaschinenarten() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenarten(inValue);
             return retVal.Maschinenart;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenartenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage request) {
+            return base.Channel.GetAllMaschinenartenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAntwort> GetAllMaschinenartenAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenartenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1605,10 +2791,20 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetAllMaschinenartenIstRentabel(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> GetAllMaschinenartenIstRentabel() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> GetAllMaschinenartenIstRentabel() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenartenIstRentabel(inValue);
             return retVal.Maschinenart;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenartenIstRentabelAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAnfrage request) {
+            return base.Channel.GetAllMaschinenartenIstRentabelAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAntwort> GetAllMaschinenartenIstRentabelAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstRentabelAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenartenIstRentabelAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1616,10 +2812,20 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetAllMaschinenartenIstUnrentabel(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> GetAllMaschinenartenIstUnrentabel() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> GetAllMaschinenartenIstUnrentabel() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenartenIstUnrentabel(inValue);
             return retVal.Maschinenart;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenartenIstUnrentabelAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAnfrage request) {
+            return base.Channel.GetAllMaschinenartenIstUnrentabelAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAntwort> GetAllMaschinenartenIstUnrentabelAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenartenIstUnrentabelAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenartenIstUnrentabelAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1627,7 +2833,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetMaschinenkaufById(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf GetMaschinenkaufById(int MaschinenkaufID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf GetMaschinenkaufById(int MaschinenkaufID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAnfrage();
             inValue.MaschinenkaufID = MaschinenkaufID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetMaschinenkaufById(inValue);
@@ -1635,14 +2841,35 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetMaschinenkaufByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAnfrage request) {
+            return base.Channel.GetMaschinenkaufByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAntwort> GetMaschinenkaufByIdAsync(int MaschinenkaufID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetMaschinenkaufByIdAnfrage();
+            inValue.MaschinenkaufID = MaschinenkaufID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetMaschinenkaufByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenkaufe(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage request) {
             return base.Channel.GetAllMaschinenkaufe(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> GetAllMaschinenkaufe() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> GetAllMaschinenkaufe() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenkaufe(inValue);
             return retVal.Maschinenkauf;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenkaufeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage request) {
+            return base.Channel.GetAllMaschinenkaufeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAntwort> GetAllMaschinenkaufeAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenkaufeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1650,7 +2877,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetAllMaschinenkaufeByMaschinenart(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> GetAllMaschinenkaufeByMaschinenart(int MaschinenartID) {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> GetAllMaschinenkaufeByMaschinenart(int MaschinenartID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAnfrage();
             inValue.MaschinenartID = MaschinenartID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenkaufeByMaschinenart(inValue);
@@ -1658,11 +2885,22 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenkaufeByMaschinenartAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAnfrage request) {
+            return base.Channel.GetAllMaschinenkaufeByMaschinenartAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAntwort> GetAllMaschinenkaufeByMaschinenartAsync(int MaschinenartID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByMaschinenartAnfrage();
+            inValue.MaschinenartID = MaschinenartID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenkaufeByMaschinenartAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenkaufeByDate(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage request) {
             return base.Channel.GetAllMaschinenkaufeByDate(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> GetAllMaschinenkaufeByDate(System.DateTime Kaufdatum) {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> GetAllMaschinenkaufeByDate(System.DateTime Kaufdatum) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage();
             inValue.Kaufdatum = Kaufdatum;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenkaufeByDate(inValue);
@@ -1670,11 +2908,22 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenkaufeByDateAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage request) {
+            return base.Channel.GetAllMaschinenkaufeByDateAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAntwort> GetAllMaschinenkaufeByDateAsync(System.DateTime Kaufdatum) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeByDateAnfrage();
+            inValue.Kaufdatum = Kaufdatum;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenkaufeByDateAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenkaufeInZeitraum(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage request) {
             return base.Channel.GetAllMaschinenkaufeInZeitraum(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> GetAllMaschinenkaufeInZeitraum(System.DateTime Vermitbegin, System.DateTime Vermitende) {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> GetAllMaschinenkaufeInZeitraum(System.DateTime Vermitbegin, System.DateTime Vermitende) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage();
             inValue.Vermitbegin = Vermitbegin;
             inValue.Vermitende = Vermitende;
@@ -1683,11 +2932,23 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllMaschinenkaufeInZeitraumAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage request) {
+            return base.Channel.GetAllMaschinenkaufeInZeitraumAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAntwort> GetAllMaschinenkaufeInZeitraumAsync(System.DateTime Vermitbegin, System.DateTime Vermitende) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllMaschinenkaufeInZeitraumAnfrage();
+            inValue.Vermitbegin = Vermitbegin;
+            inValue.Vermitende = Vermitende;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllMaschinenkaufeInZeitraumAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetVermietungById(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage request) {
             return base.Channel.GetVermietungById(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Vermietung GetVermietungById(int VermietungslisteID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung GetVermietungById(int VermietungslisteID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage();
             inValue.VermietungslisteID = VermietungslisteID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetVermietungById(inValue);
@@ -1695,14 +2956,35 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetVermietungByIdAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage request) {
+            return base.Channel.GetVermietungByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAntwort> GetVermietungByIdAsync(int VermietungslisteID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungByIdAnfrage();
+            inValue.VermietungslisteID = VermietungslisteID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetVermietungByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllVermietungen(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage request) {
             return base.Channel.GetAllVermietungen(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> GetAllVermietungen() {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> GetAllVermietungen() {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage();
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllVermietungen(inValue);
             return retVal.Vermietung;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetAllVermietungenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage request) {
+            return base.Channel.GetAllVermietungenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAntwort> GetAllVermietungenAsync() {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetAllVermietungenAnfrage();
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetAllVermietungenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1710,7 +2992,7 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return base.Channel.GetVermietungenInZeitraum(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> GetVermietungenInZeitraum(System.DateTime Vermitbegin, System.DateTime Vermitende) {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> GetVermietungenInZeitraum(System.DateTime Vermitbegin, System.DateTime Vermitende) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAnfrage();
             inValue.Vermitbegin = Vermitbegin;
             inValue.Vermitende = Vermitende;
@@ -1719,11 +3001,23 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetVermietungenInZeitraumAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAnfrage request) {
+            return base.Channel.GetVermietungenInZeitraumAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAntwort> GetVermietungenInZeitraumAsync(System.DateTime Vermitbegin, System.DateTime Vermitende) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenInZeitraumAnfrage();
+            inValue.Vermitbegin = Vermitbegin;
+            inValue.Vermitende = Vermitende;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetVermietungenInZeitraumAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetVermietungenAnKunde(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage request) {
             return base.Channel.GetVermietungenAnKunde(request);
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> GetVermietungenAnKunde(int KundenID) {
+        public System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> GetVermietungenAnKunde(int KundenID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage();
             inValue.KundenID = KundenID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetVermietungenAnKunde(inValue);
@@ -1731,11 +3025,22 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.GetVermietungenAnKundeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage request) {
+            return base.Channel.GetVermietungenAnKundeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAntwort> GetVermietungenAnKundeAsync(int KundenID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.GetVermietungenAnKundeAnfrage();
+            inValue.KundenID = KundenID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).GetVermietungenAnKundeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NuerKunde(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage request) {
             return base.Channel.NuerKunde(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Kunde NuerKunde(string Kundenname) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde NuerKunde(string Kundenname) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage();
             inValue.Kundenname = Kundenname;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NuerKunde(inValue);
@@ -1743,11 +3048,22 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NuerKundeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage request) {
+            return base.Channel.NuerKundeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAntwort> NuerKundeAsync(string Kundenname) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerKundeAnfrage();
+            inValue.Kundenname = Kundenname;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NuerKundeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NuerLagerplatz(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage request) {
             return base.Channel.NuerLagerplatz(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand NuerLagerplatz(int MaschinenartID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand NuerLagerplatz(int MaschinenartID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage();
             inValue.MaschinenartID = MaschinenartID;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NuerLagerplatz(inValue);
@@ -1755,11 +3071,22 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NuerLagerplatzAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage request) {
+            return base.Channel.NuerLagerplatzAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAntwort> NuerLagerplatzAsync(int MaschinenartID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NuerLagerplatzAnfrage();
+            inValue.MaschinenartID = MaschinenartID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NuerLagerplatzAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NeueMaschinenart(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage request) {
             return base.Channel.NeueMaschinenart(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenart NeueMaschinenart(string Maschinenartname) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart NeueMaschinenart(string Maschinenartname) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage();
             inValue.Maschinenartname = Maschinenartname;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NeueMaschinenart(inValue);
@@ -1767,11 +3094,22 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NeueMaschinenartAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage request) {
+            return base.Channel.NeueMaschinenartAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAntwort> NeueMaschinenartAsync(string Maschinenartname) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueMaschinenartAnfrage();
+            inValue.Maschinenartname = Maschinenartname;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NeueMaschinenartAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NeuMaschinenkauf(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage request) {
             return base.Channel.NeuMaschinenkauf(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf NeuMaschinenkauf(int Einzelpreis, System.DateTime Kaufdatum, int MaschinenartID, int anz) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf NeuMaschinenkauf(int Einzelpreis, System.DateTime Kaufdatum, int MaschinenartID, int anz) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage();
             inValue.Einzelpreis = Einzelpreis;
             inValue.Kaufdatum = Kaufdatum;
@@ -1782,11 +3120,25 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NeuMaschinenkaufAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage request) {
+            return base.Channel.NeuMaschinenkaufAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAntwort> NeuMaschinenkaufAsync(int Einzelpreis, System.DateTime Kaufdatum, int MaschinenartID, int anz) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeuMaschinenkaufAnfrage();
+            inValue.Einzelpreis = Einzelpreis;
+            inValue.Kaufdatum = Kaufdatum;
+            inValue.MaschinenartID = MaschinenartID;
+            inValue.anz = anz;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NeuMaschinenkaufAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NeueVermietungAnKunden(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage request) {
             return base.Channel.NeueVermietungAnKunden(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Vermietung NeueVermietungAnKunden(int KundenID, System.DateTime Vermitbegin, System.DateTime Vermitende) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung NeueVermietungAnKunden(int KundenID, System.DateTime Vermitbegin, System.DateTime Vermitende) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage();
             inValue.KundenID = KundenID;
             inValue.Vermitbegin = Vermitbegin;
@@ -1796,11 +3148,24 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.NeueVermietungAnKundenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage request) {
+            return base.Channel.NeueVermietungAnKundenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAntwort> NeueVermietungAnKundenAsync(int KundenID, System.DateTime Vermitbegin, System.DateTime Vermitende) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.NeueVermietungAnKundenAnfrage();
+            inValue.KundenID = KundenID;
+            inValue.Vermitbegin = Vermitbegin;
+            inValue.Vermitende = Vermitende;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).NeueVermietungAnKundenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.MaterialAnVermietungAnfügen(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage request) {
             return base.Channel.MaterialAnVermietungAnfügen(request);
         }
         
-        public Crosscutting.MietmaterialdatenbankKlassen.Vermietung MaterialAnVermietungAnfügen(int MaschinenartID, int VermietID) {
+        public Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung MaterialAnVermietungAnfügen(int MaschinenartID, int VermietID) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage();
             inValue.MaschinenartID = MaschinenartID;
             inValue.VermietID = VermietID;
@@ -1809,11 +3174,23 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAntwort> Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.MaterialAnVermietungAnfügenAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage request) {
+            return base.Channel.MaterialAnVermietungAnfügenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAntwort> MaterialAnVermietungAnfügenAsync(int MaschinenartID, int VermietID) {
+            Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.MaterialAnVermietungAnfügenAnfrage();
+            inValue.MaschinenartID = MaschinenartID;
+            inValue.VermietID = VermietID;
+            return ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).MaterialAnVermietungAnfügenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.SaveKundenSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAnfrage request) {
             return base.Channel.SaveKundenSet(request);
         }
         
-        public string SaveKundenSet(ref System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Kunde> NeueKunden) {
+        public string SaveKundenSet(ref System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Kunde> NeueKunden) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAnfrage();
             inValue.NeueKunden = NeueKunden;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).SaveKundenSet(inValue);
@@ -1821,12 +3198,16 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return retVal.Statistik;
         }
         
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAntwort> SaveKundenSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveKundenSetAnfrage request) {
+            return base.Channel.SaveKundenSetAsync(request);
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.SaveLagerSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAnfrage request) {
             return base.Channel.SaveLagerSet(request);
         }
         
-        public string SaveLagerSet(ref System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand> NeueLagerbestaende) {
+        public string SaveLagerSet(ref System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Lagerbestand> NeueLagerbestaende) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAnfrage();
             inValue.NeueLagerbestaende = NeueLagerbestaende;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).SaveLagerSet(inValue);
@@ -1834,12 +3215,16 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return retVal.Statistik;
         }
         
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAntwort> SaveLagerSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveLagerSetAnfrage request) {
+            return base.Channel.SaveLagerSetAsync(request);
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.SaveMaschinenartSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAnfrage request) {
             return base.Channel.SaveMaschinenartSet(request);
         }
         
-        public string SaveMaschinenartSet(ref System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenart> NeueMaschinenarten) {
+        public string SaveMaschinenartSet(ref System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenart> NeueMaschinenarten) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAnfrage();
             inValue.NeueMaschinenarten = NeueMaschinenarten;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).SaveMaschinenartSet(inValue);
@@ -1847,12 +3232,16 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return retVal.Statistik;
         }
         
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAntwort> SaveMaschinenartSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenartSetAnfrage request) {
+            return base.Channel.SaveMaschinenartSetAsync(request);
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.SaveMaschinenkaufe(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAnfrage request) {
             return base.Channel.SaveMaschinenkaufe(request);
         }
         
-        public string SaveMaschinenkaufe(ref System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf> NeueMaschinenkaufe) {
+        public string SaveMaschinenkaufe(ref System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Maschinenkauf> NeueMaschinenkaufe) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAnfrage();
             inValue.NeueMaschinenkaufe = NeueMaschinenkaufe;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).SaveMaschinenkaufe(inValue);
@@ -1860,17 +3249,25 @@ namespace Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy {
             return retVal.Statistik;
         }
         
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAntwort> SaveMaschinenkaufeAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveMaschinenkaufeAnfrage request) {
+            return base.Channel.SaveMaschinenkaufeAsync(request);
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAntwort Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice.SaveVermitungenSet(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAnfrage request) {
             return base.Channel.SaveVermitungenSet(request);
         }
         
-        public string SaveVermitungenSet(ref System.Collections.ObjectModel.ObservableCollection<Crosscutting.MietmaterialdatenbankKlassen.Vermietung> NeueVermietungen) {
+        public string SaveVermitungenSet(ref System.Collections.ObjectModel.ObservableCollection<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.Vermietung> NeueVermietungen) {
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAnfrage inValue = new Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAnfrage();
             inValue.NeueVermietungen = NeueVermietungen;
             Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAntwort retVal = ((Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.IMietservice)(this)).SaveVermitungenSet(inValue);
             NeueVermietungen = retVal.NeueVermietungen;
             return retVal.Statistik;
+        }
+        
+        public System.Threading.Tasks.Task<Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAntwort> SaveVermitungenSetAsync(Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy.SaveVermitungenSetAnfrage request) {
+            return base.Channel.SaveVermitungenSetAsync(request);
         }
     }
 }

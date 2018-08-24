@@ -3,11 +3,11 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Media;
-using Crosscutting.MietmaterialdatenbankKlassen;
 using mvvmClient.Model;
 using mvvmClient.Commands;
 using System.Data;
 using System.Windows.Controls;
+using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
 
 namespace mvvmClient.Ansichten
 {

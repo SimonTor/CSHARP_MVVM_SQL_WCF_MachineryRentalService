@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="Kunde">
     <xs:sequence>
@@ -7,7 +7,7 @@
       <xs:element minOccurs="0" name="Kunden_ID" type="xs:int" />
       <xs:element minOccurs="0" name="Kundengesamtumsatz" type="xs:double" />
       <xs:element minOccurs="0" name="Kundenname" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Vermietung" nillable="true" type="tns:TrackableCollectionOfVermietungoSP_SwyHW" />
+      <xs:element minOccurs="0" name="Vermietung" nillable="true" type="tns:TrackableCollectionOfVermietungDZ4vHCX7" />
     </xs:sequence>
     <xs:attribute ref="ser:Id" />
     <xs:attribute ref="ser:Ref" />
@@ -116,11 +116,11 @@
     </xs:list>
   </xs:simpleType>
   <xs:element name="ObjectState" nillable="true" type="tns:ObjectState" />
-  <xs:complexType name="TrackableCollectionOfVermietungoSP_SwyHW">
+  <xs:complexType name="TrackableCollectionOfVermietungDZ4vHCX7">
     <xs:annotation>
       <xs:appinfo>
-        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="Vermietung" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" />
+        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Vermietung" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" />
         </GenericType>
       </xs:appinfo>
     </xs:annotation>
@@ -128,14 +128,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Vermietung" nillable="true" type="tns:Vermietung" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="TrackableCollectionOfVermietungoSP_SwyHW" nillable="true" type="tns:TrackableCollectionOfVermietungoSP_SwyHW" />
+  <xs:element name="TrackableCollectionOfVermietungDZ4vHCX7" nillable="true" type="tns:TrackableCollectionOfVermietungDZ4vHCX7" />
   <xs:complexType name="Vermietung">
     <xs:sequence>
       <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
       <xs:element minOccurs="0" name="Gesamtpreis" type="xs:double" />
       <xs:element minOccurs="0" name="Kunde" nillable="true" type="tns:Kunde" />
       <xs:element minOccurs="0" name="Kunden_ID" type="xs:int" />
-      <xs:element minOccurs="0" name="Maschinenart" nillable="true" type="tns:TrackableCollectionOfMaschinenartoSP_SwyHW" />
+      <xs:element minOccurs="0" name="Maschinenart" nillable="true" type="tns:TrackableCollectionOfMaschinenartDZ4vHCX7" />
       <xs:element minOccurs="0" name="Vermiet_ID" type="xs:int" />
       <xs:element minOccurs="0" name="Vermietbegin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Vermietende" type="xs:dateTime" />
@@ -144,11 +144,11 @@
     <xs:attribute ref="ser:Ref" />
   </xs:complexType>
   <xs:element name="Vermietung" nillable="true" type="tns:Vermietung" />
-  <xs:complexType name="TrackableCollectionOfMaschinenartoSP_SwyHW">
+  <xs:complexType name="TrackableCollectionOfMaschinenartDZ4vHCX7">
     <xs:annotation>
       <xs:appinfo>
-        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="Maschinenart" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" />
+        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Maschinenart" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" />
         </GenericType>
       </xs:appinfo>
     </xs:annotation>
@@ -156,25 +156,38 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Maschinenart" nillable="true" type="tns:Maschinenart" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="TrackableCollectionOfMaschinenartoSP_SwyHW" nillable="true" type="tns:TrackableCollectionOfMaschinenartoSP_SwyHW" />
+  <xs:element name="TrackableCollectionOfMaschinenartDZ4vHCX7" nillable="true" type="tns:TrackableCollectionOfMaschinenartDZ4vHCX7" />
   <xs:complexType name="Maschinenart">
     <xs:sequence>
       <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
       <xs:element minOccurs="0" name="Gesamteinnahmen" type="xs:int" />
       <xs:element minOccurs="0" name="Gesamtkosten" type="xs:int" />
-      <xs:element minOccurs="0" name="Lagerbestand" nillable="true" type="tns:Lagerbestand" />
+      <xs:element minOccurs="0" name="Lagerbestand" nillable="true" type="tns:TrackableCollectionOfLagerbestandDZ4vHCX7" />
       <xs:element minOccurs="0" name="Maschinenart_ID" type="xs:int" />
       <xs:element minOccurs="0" name="Maschinenartbezeichnung" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Maschinenkaufliste" nillable="true" type="tns:TrackableCollectionOfMaschinenkaufoSP_SwyHW" />
+      <xs:element minOccurs="0" name="Maschinenkaufliste" nillable="true" type="tns:TrackableCollectionOfMaschinenkaufDZ4vHCX7" />
       <xs:element minOccurs="0" name="Rentabilität" type="xs:double" />
       <xs:element minOccurs="0" name="Tagessatz" type="xs:double" />
       <xs:element minOccurs="0" name="Vermietfaktor" type="xs:int" />
-      <xs:element minOccurs="0" name="Vermietung" nillable="true" type="tns:TrackableCollectionOfVermietungoSP_SwyHW" />
+      <xs:element minOccurs="0" name="Vermietung" nillable="true" type="tns:TrackableCollectionOfVermietungDZ4vHCX7" />
     </xs:sequence>
     <xs:attribute ref="ser:Id" />
     <xs:attribute ref="ser:Ref" />
   </xs:complexType>
   <xs:element name="Maschinenart" nillable="true" type="tns:Maschinenart" />
+  <xs:complexType name="TrackableCollectionOfLagerbestandDZ4vHCX7">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Lagerbestand" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lagerbestand" nillable="true" type="tns:Lagerbestand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackableCollectionOfLagerbestandDZ4vHCX7" nillable="true" type="tns:TrackableCollectionOfLagerbestandDZ4vHCX7" />
   <xs:complexType name="Lagerbestand">
     <xs:sequence>
       <xs:element minOccurs="0" name="ChangeTracker" nillable="true" type="tns:ObjectChangeTracker" />
@@ -204,11 +217,11 @@
     <xs:attribute ref="ser:Ref" />
   </xs:complexType>
   <xs:element name="Maschinenkauf" nillable="true" type="tns:Maschinenkauf" />
-  <xs:complexType name="TrackableCollectionOfMaschinenkaufoSP_SwyHW">
+  <xs:complexType name="TrackableCollectionOfMaschinenkaufDZ4vHCX7">
     <xs:annotation>
       <xs:appinfo>
-        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="Maschinenkauf" Namespace="http://schemas.datacontract.org/2004/07/Crosscutting.MietmaterialdatenbankKlassen" />
+        <GenericType Name="TrackableCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Maschinenkauf" Namespace="http://schemas.datacontract.org/2004/07/CrossCutting.Mietmaschinendatenbank_DataClasses" />
         </GenericType>
       </xs:appinfo>
     </xs:annotation>
@@ -216,7 +229,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Maschinenkauf" nillable="true" type="tns:Maschinenkauf" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="TrackableCollectionOfMaschinenkaufoSP_SwyHW" nillable="true" type="tns:TrackableCollectionOfMaschinenkaufoSP_SwyHW" />
+  <xs:element name="TrackableCollectionOfMaschinenkaufDZ4vHCX7" nillable="true" type="tns:TrackableCollectionOfMaschinenkaufDZ4vHCX7" />
   <xs:complexType name="ArrayOfKunde">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Kunde" nillable="true" type="tns:Kunde" />

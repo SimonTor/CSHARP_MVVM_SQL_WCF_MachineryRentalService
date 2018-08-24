@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 using System.Data.SqlClient;
 using System.Data.EntityClient;
 
@@ -46,9 +46,9 @@ namespace Crosscutting.CrosscuttingTestClient
                 entityBuilder.ProviderConnectionString = providerString;
 
                 // Set the Metadata location.
-                entityBuilder.Metadata = @"K:\C#\Baumaschinenverleih\Software\CrossCutting\Mietmaschinendatenbank_DataClasses\bin\Debug\MietmaschinendatenbankModel.csdl|         
-                                           K:\C#\Baumaschinenverleih\Software\CrossCutting\Mietmaschinendatenbank_DataClasses\bin\Debug\MietmaschinendatenbankModel.ssdl|         
-                                           K:\C#\Baumaschinenverleih\Software\CrossCutting\Mietmaschinendatenbank_DataClasses\bin\Debug\MietmaschinendatenbankModel.msl";
+                entityBuilder.Metadata = @"E:\Projekte\Git\CSHARP_MVVM_SQL_WCF_MachineryRentalService\CrossCutting\Mietmaschinendatenbank_DataClasses\bin\Debug\MietmaschinendatenbankModel.csdl|         
+                                           E:\Projekte\Git\CSHARP_MVVM_SQL_WCF_MachineryRentalService\CrossCutting\Mietmaschinendatenbank_DataClasses\bin\Debug\MietmaschinendatenbankModel.ssdl|         
+                                           E:\Projekte\Git\CSHARP_MVVM_SQL_WCF_MachineryRentalService\CrossCutting\Mietmaschinendatenbank_DataClasses\bin\Debug\MietmaschinendatenbankModel.msl";
                 Console.WriteLine(entityBuilder.ToString());
 
                 EntityConnection conn = new EntityConnection(entityBuilder.ToString());
@@ -71,16 +71,66 @@ namespace Crosscutting.CrosscuttingTestClient
             try
             {
                 Console.Write(modell.Connection.ConnectionString);
-                var abfrage = from Kundendaten in modell.KundenlisteSatz select Kundendaten;
-
-                foreach (Kunde testKunde in abfrage)
+                //---------------------------------
+                try
                 {
-                    Console.WriteLine(testKunde);
-                    if (testKunde.Kundenname == "Sa")
+                    var abfrage1 = from Kundendaten in modell.KundenlisteSatz select Kundendaten;
+                    object test = abfrage1.ToList();
+                    foreach (Kunde testKunde in abfrage1)
                     {
-                        testKunde.Kundenname = "Sandra";                        
+                        Console.WriteLine(testKunde);
+                        if (testKunde.Kundenname == "Sa")
+                        {
+                            testKunde.Kundenname = "Sandra";
+                        }
                     }
                 }
+                catch(Exception ex)
+                {
+                    Console.Write("Error:" + ex.ToString());
+                }
+                //---------------------------------
+                try
+                {
+                    var abfrage2 = from Lager in modell.LagerbestandSatz select Lager;
+                    object test = abfrage2.ToList();
+                }
+                catch(Exception ex)
+                {
+                    Console.Write("Error:" + ex.ToString());
+                }
+                //---------------------------------
+                try
+                {
+                    var abfrage3 = from Maschinenart in modell.MaschinenartenlisteSatz select Maschinenart;
+                    object test = abfrage3.ToList();
+                }
+                catch(Exception ex)
+                {
+                    Console.Write("Error:" + ex.ToString());
+                }
+                //---------------------------------
+                try
+                {
+                    var abfrage4 = from Maschinenkauf in modell.MaschinenkauflisteSatz select Maschinenkauf;
+                    object test = abfrage4.ToList();
+                }
+                catch(Exception ex)
+                {
+                    Console.Write("Error:" + ex.ToString());
+                }
+                //---------------------------------
+                try
+                {
+                    var abfrage5 = from Vermietung in modell.VermietungslisteSatz select Vermietung;
+                    object test = abfrage5.ToList();
+                }
+                catch(Exception ex)
+                {
+                    Console.Write("Error:" + ex.ToString());
+                }
+                //---------------------------------
+                
                 modell.SaveChanges();
             }
             catch (Exception ex)

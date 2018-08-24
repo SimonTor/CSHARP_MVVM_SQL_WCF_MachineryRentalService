@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ServiceModel;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 
 namespace Crosscutting.Dienste.Shared.Contracts
 {

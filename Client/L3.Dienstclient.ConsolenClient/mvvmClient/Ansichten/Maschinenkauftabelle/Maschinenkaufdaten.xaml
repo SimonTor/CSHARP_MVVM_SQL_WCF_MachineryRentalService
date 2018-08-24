@@ -45,13 +45,13 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*"  Header="Maschinenkauf ID" Binding="{Binding Maschinenkauf_ID}" IsReadOnly="True"/>
-                <DataGridTextColumn Width="*"  Header="Maschinenart ID" Binding="{Binding Maschinenart_ID,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Maschinenart ID" Binding="{Binding Maschinenart_ID,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
                 <DataGridTextColumn Width="*"  Header="Maschinenartenliste" Binding="{Binding Maschinenartenliste,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn Width="*"  Header="Einzelpreis" Binding="{Binding Einzelpreis,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn Width="*"  Header="Anzahl" Binding="{Binding Anzahl,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="*"  Header="Rechnungspreis" Binding="{Binding Rechnungspreis,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Rechnungspreis" Binding="{Binding Rechnungspreis,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
                 <DataGridTextColumn Width="*"  Header="Kaufdatum" Binding="{Binding Kaufdatum,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="*"  Header="ChangeTracker" Binding="{Binding ChangeTracker.State}"/>
+                <DataGridTextColumn Width="*"  Header="ChangeTracker" Binding="{Binding ChangeTracker.State}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
 

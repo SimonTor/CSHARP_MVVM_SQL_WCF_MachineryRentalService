@@ -1,5 +1,4 @@
 ﻿using System;
-using Crosscutting.MietmaterialdatenbankKlassen;
 using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
 
 namespace mvvmClient.Model

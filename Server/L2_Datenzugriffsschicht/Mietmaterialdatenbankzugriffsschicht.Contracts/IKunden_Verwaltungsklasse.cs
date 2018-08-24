@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 
 namespace Server.L2.Mietmaterialdatenbankzugriffsschicht.Contracts
 {

@@ -52,12 +52,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntitaetsklassenErweiterungen.cs" />
+    <Compile Include="Kontexterweiterung.cs" />
+    <Compile Include="Kunde.cs">
+      <DependentUpon>MietmaschninendatenbankModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lagerbestand.cs">
+      <DependentUpon>MietmaschninendatenbankModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maschinenart.cs">
+      <DependentUpon>MietmaschninendatenbankModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maschinenkauf.cs">
+      <DependentUpon>MietmaschninendatenbankModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MietmaschinendatenbankModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MietmaschinendatenbankModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MietmaschinendatenbankModelContainerFactory.cs" />
+    <Compile Include="MietmaschninendatenbankModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MietmaschninendatenbankModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MietmaschninendatenbankModel.Context.Extensions.cs">
+      <DependentUpon>MietmaschninendatenbankModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MietmaschninendatenbankModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MietmaschninendatenbankModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vermietung.cs">
+      <DependentUpon>MietmaschninendatenbankModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="MietmaschinendatenbankModel.edmx">
@@ -70,17 +101,28 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="Ressources\MietmaschinendatenbankModel.csdl" />
-    <None Include="Ressources\MietmaschinendatenbankModel.msl" />
-    <None Include="Ressources\MietmaschinendatenbankModel.ssdl" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MietmaschinendatenbankModel.edmx.sql" />
+    <Content Include="MietmaschinendatenbankModel.edmx.sql">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="MietmaschninendatenbankModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MietmaschninendatenbankModel.Context.cs</LastGenOutput>
+      <CustomToolNamespace>CrossCutting.Mietmaschinendatenbank_DataClasses</CustomToolNamespace>
+    </None>
+    <Content Include="MietmaschninendatenbankModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MietmaschninendatenbankModel.cs</LastGenOutput>
+      <CustomToolNamespace>CrossCutting.Mietmaschinendatenbank_DataClasses</CustomToolNamespace>
+    </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Ressources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

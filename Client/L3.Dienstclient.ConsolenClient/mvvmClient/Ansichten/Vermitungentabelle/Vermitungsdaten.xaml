@@ -47,7 +47,7 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*"  Header="Vermiet ID" Binding="{Binding Vermiet_ID}" IsReadOnly="True"/>
-                <DataGridTextColumn Width="*"  Header="Kunden ID" Binding="{Binding Kunden_ID,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Width="*"  Header="Kunden ID" Binding="{Binding Kunden_ID,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
                 <DataGridTextColumn Width="*"  Header="Kunde" Binding="{Binding Kunde,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn Width="*"  Header="Maschinenart" Binding="{Binding Maschinenart,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
@@ -82,8 +82,8 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTextColumn Width="*"  Header="Gesamtpreis" Binding="{Binding Gesamtpreis,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Width="*"  Header="ChangeTracker" Binding="{Binding ChangeTracker.State}"/>
+                <DataGridTextColumn Width="*"  Header="Gesamtpreis" Binding="{Binding Gesamtpreis,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="*"  Header="ChangeTracker" Binding="{Binding ChangeTracker.State}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
 

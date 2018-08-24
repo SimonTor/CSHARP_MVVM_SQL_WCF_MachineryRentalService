@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Crosscutting.Logging.Contracts;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 using Server.L2.Mietmaterialdatenbankzugriffsschicht.Contracts;
 using Server.L3.Logikschicht.Contracts;
 

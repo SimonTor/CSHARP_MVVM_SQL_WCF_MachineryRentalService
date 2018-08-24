@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2ef7a405-cf0c-4231-9201-d75eb1a9d422" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e43daf7a-62c9-4f3b-8131-8209b29ccd2a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
@@ -23,12 +24,12 @@
     <MetadataSource Address="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WcfNinjectBaumaschinenmietService.xsd" MetadataType="Schema" ID="4d5a7ff1-62ee-4896-9c0e-20bd356baaaf" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd0" />
-    <MetadataFile FileName="WcfNinjectBaumaschinenmietService.disco" MetadataType="Disco" ID="af43bb2c-b58e-41c4-be86-180fc2ea3cf8" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?disco" />
-    <MetadataFile FileName="WcfNinjectBaumaschinenmietService1.xsd" MetadataType="Schema" ID="4930ad4c-6073-43d0-8ed8-bdc91b157292" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd2" />
-    <MetadataFile FileName="WcfNinjectBaumaschinenmietService2.xsd" MetadataType="Schema" ID="d0002683-1136-4a96-938d-4c0b96c3d997" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd1" />
-    <MetadataFile FileName="WcfNinjectBaumaschinenmietService.wsdl" MetadataType="Wsdl" ID="1758bd1c-27a4-4751-90ab-e1d7eb8dc47c" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="IMietservice6fff5abe-cc97-47c0-810d-97cb1345d265.wsdl" MetadataType="Wsdl" ID="6529b2b2-55f8-4d8d-8a57-7e57dc9ff66a" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?wsdl" />
+    <MetadataFile FileName="WcfNinjectBaumaschinenmietService.xsd" MetadataType="Schema" ID="7cc0a07a-98a7-4df2-9741-d0ff5e19575d" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfNinjectBaumaschinenmietService.disco" MetadataType="Disco" ID="037459f4-865c-4d2e-815e-b821648b6d94" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?disco" />
+    <MetadataFile FileName="WcfNinjectBaumaschinenmietService1.xsd" MetadataType="Schema" ID="17e1d519-014a-4f22-b286-66d2c08ace9b" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfNinjectBaumaschinenmietService2.xsd" MetadataType="Schema" ID="96f34f66-38a8-40a6-8626-e0c316a31c09" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WcfNinjectBaumaschinenmietService.wsdl" MetadataType="Wsdl" ID="ef9ab96f-7b5a-43fc-9846-15c6f856ff61" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="IMietservicebbc88403-91f6-46d0-8501-7874e73cd0f1.wsdl" MetadataType="Wsdl" ID="7a90a4cc-dfe6-4bc7-bfe4-6218c26922f5" SourceId="1" SourceUrl="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -11,7 +11,7 @@ CodeRegion region = new CodeRegion(this);
 
 EntityFrameworkTemplateFileManager fileManager = EntityFrameworkTemplateFileManager.Create(this);
 
-string inputFile = @"..\..\..\CrossCutting\Mietmaschinendatenbank_DataClasses\MietmaschinendatenbankModel.edmx";
+string inputFile = @"..\Mietmaschinendatenbank_DataClasses\MietmaschinendatenbankModel.edmx";
 EdmItemCollection ItemCollection = loader.CreateEdmItemCollection(inputFile);
 ModelNamespace = loader.GetModelNamespace(inputFile);
 DefaultSummaryComment = CodeGenerationTools.GetResourceString("Template_CommentNoDocumentation");
@@ -28,7 +28,7 @@ WriteHeader(fileManager);
 BeginNamespace(namespaceName, code);
 
 #>
-<#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> : ObjectContext, IMietmaschinendatenbankModelContainer
+<#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> : ObjectContext
 {
     public const string ConnectionString = "name=<#=container.Name#>";
     public const string ContainerName = "<#=container.Name#>";
@@ -196,7 +196,6 @@ using System.Data.Objects.DataClasses;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using Mietmaschinendatenbank_Geschäftsobjekt.CrossCutting.Contracts;
 
 
 <#=String.Join(String.Empty, extraUsings.Select(u => "using " + u + ";" + Environment.NewLine).ToArray())#>

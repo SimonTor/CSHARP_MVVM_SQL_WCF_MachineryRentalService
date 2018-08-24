@@ -1,5 +1,4 @@
-﻿using Crosscutting.MietmaterialdatenbankKlassen;
-using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
+﻿using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

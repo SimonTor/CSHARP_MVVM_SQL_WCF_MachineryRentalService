@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Crosscutting.Logging.Contracts;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 using Server.L2.Mietmaterialdatenbankzugriffsschicht.Contracts;
 
 namespace Server.L2.Mietmaterialdatenbankzugriffsschicht
@@ -141,7 +141,7 @@ namespace Server.L2.Mietmaterialdatenbankzugriffsschicht
                         var abfrage = from Vermietung in modell.VermietungslisteSatz.Include("Maschinenart").Include("Kunde") select Vermietung;
                         Vermietung current = abfrage.Where(o => o.Vermiet_ID == p.Vermiet_ID).First();
 
-                        Crosscutting.MietmaterialdatenbankKlassen.Vermietung.Clone(p, current);
+                        CrossCutting.Mietmaschinendatenbank_DataClasses.Vermietung.Clone(p, current);
 
                         modell.VermietungslisteSatz.ApplyChanges(current);
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using Crosscutting.MietmaterialdatenbankKlassen;
 using mvvmClient.Model;
+using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
 
 namespace mvvmClient.Design
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 using Server.L2.Mietmaterialdatenbankzugriffsschicht.Contracts;
 
 namespace Server.L2.Mietmaterialdatenbankzugriffsschicht
@@ -57,7 +57,7 @@ namespace Server.L2.Mietmaterialdatenbankzugriffsschicht
         /// </summary>
         public List<Maschinenart> GetAllMaschinenarten()
         {
-            var abfrage = from Maschinenart in modell.MaschinenartenlisteSatz .Include("Maschinenkaufliste") .Include("Vermietung") . Include("Lagerbestand") select Maschinenart;
+            var abfrage = from Maschinenart in modell.MaschinenartenlisteSatz select Maschinenart;
             return abfrage.ToList();
         }
 
@@ -135,7 +135,7 @@ namespace Server.L2.Mietmaterialdatenbankzugriffsschicht
                         var abfrage = from Maschinenart in modell.MaschinenartenlisteSatz select Maschinenart;
                         Maschinenart current = abfrage.Where(o => o.Maschinenart_ID == p.Maschinenart_ID).First();
 
-                        Crosscutting.MietmaterialdatenbankKlassen.Maschinenart.Clone(p, current);
+                        CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenart.Clone(p, current);
 
                         modell.MaschinenartenlisteSatz.ApplyChanges(current);
 

@@ -31,7 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Crosscutting.MietmaterialdatenbankKlassen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -56,17 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Kunde.datasource" />
-    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Lagerbestand.datasource" />
-    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Maschinenart.datasource" />
-    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf.datasource" />
-    <None Include="Properties\DataSources\Crosscutting.MietmaterialdatenbankKlassen.Vermietung.datasource" />
-    <None Include="Properties\DataSources\Datenbasisschicht.MietmaterialdatenbankKlassen.Kunde.datasource" />
-    <None Include="Properties\DataSources\Datenbasisschicht.MietmaterialdatenbankKlassen.Lagerbestand.datasource" />
-    <None Include="Properties\DataSources\Datenbasisschicht.MietmaterialdatenbankKlassen.Maschinenart.datasource" />
-    <None Include="Properties\DataSources\Datenbasisschicht.MietmaterialdatenbankKlassen.Maschinenkauf.datasource" />
-    <None Include="Properties\DataSources\Datenbasisschicht.MietmaterialdatenbankKlassen.Vermietung.datasource" />
-    <None Include="Service References\Client.L2.Proxy.ClientProxy\IMietservice6fff5abe-cc97-47c0-810d-97cb1345d265.wsdl" />
+    <None Include="Service References\Client.L2.Proxy.ClientProxy\IMietservicebbc88403-91f6-46d0-8501-7874e73cd0f1.wsdl" />
     <None Include="Service References\Client.L2.Proxy.ClientProxy\WcfNinjectBaumaschinenmietService.wsdl" />
     <None Include="Service References\Client.L2.Proxy.ClientProxy\WcfNinjectBaumaschinenmietService.xsd">
       <SubType>Designer</SubType>
@@ -77,6 +66,9 @@
     <None Include="Service References\Client.L2.Proxy.ClientProxy\WcfNinjectBaumaschinenmietService2.xsd">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Client.L2.Proxy.ClientProxy\" />
@@ -95,12 +87,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\CrossCutting\MietmaterialdatenbankKlassen\MietmaterialdatenbankKlassen.csproj">
-      <Project>{66be3ae7-a508-4730-979d-708216e998cb}</Project>
-      <Name>MietmaterialdatenbankKlassen</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -45,13 +45,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MietmaterialdatenbankKlassen\MietmaterialdatenbankKlassen.csproj">
-      <Project>{66be3ae7-a508-4730-979d-708216e998cb}</Project>
-      <Name>MietmaterialdatenbankKlassen</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Server\L4_Dienste\Dienste.Contracts\Dienste.Contracts.csproj">
       <Project>{6306f2dd-aa2e-4f08-8335-7cc9b5e6e735}</Project>
       <Name>Dienste.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mietmaschinendatenbank_DataClasses\Mietmaschinendatenbank_DataClasses.csproj">
+      <Project>{2364e52e-6fd6-4938-acd4-087d58fad5c3}</Project>
+      <Name>Mietmaschinendatenbank_DataClasses</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

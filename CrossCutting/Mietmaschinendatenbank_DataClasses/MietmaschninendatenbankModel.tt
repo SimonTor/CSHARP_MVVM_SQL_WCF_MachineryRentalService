@@ -9,7 +9,7 @@ MetadataLoader loader = new MetadataLoader(this);
 CodeRegion region = new CodeRegion(this, 1);
 MetadataTools ef = new MetadataTools(this);
 
-string inputFile = @"..\CrossCutting\Mietmaschinendatenbank_DataClasses\MietmaschinendatenbankModel.edmx";
+string inputFile = @"..\Mietmaschinendatenbank_DataClasses\MietmaschinendatenbankModel.edmx";
 MetadataWorkspace metadataWorkspace = null;
 bool allMetadataLoaded =loader.TryLoadAllMetadata(inputFile, out metadataWorkspace);
 EdmItemCollection ItemCollection = (EdmItemCollection)metadataWorkspace.GetItemCollection(DataSpace.CSpace);

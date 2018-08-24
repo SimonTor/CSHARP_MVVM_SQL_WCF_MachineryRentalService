@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,10 +53,6 @@
     <ProjectReference Include="..\..\L2.Proxy\Mietmaschienenservice_Dienstproxy\Mietmaschienenservice_Dienstproxy.csproj">
       <Project>{c8a01ebf-41d2-4a2e-b135-64756fb356a1}</Project>
       <Name>Mietmaschienenservice_Dienstproxy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\CrossCutting\MietmaterialdatenbankKlassen\MietmaterialdatenbankKlassen.csproj">
-      <Project>{66be3ae7-a508-4730-979d-708216e998cb}</Project>
-      <Name>MietmaterialdatenbankKlassen</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

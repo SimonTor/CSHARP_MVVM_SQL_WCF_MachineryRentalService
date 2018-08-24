@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.Baumaschinenmietservice.de/Services" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IMietservicebbc88403-91f6-46d0-8501-7874e73cd0f1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://www.Baumaschinenmietservice.de/Services" location="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IMietservice" type="i0:IMietservice">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Call">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/Call" style="document" />
+      <wsdl:input name="GetCallAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCallAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKundeById">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetKundeById" style="document" />
+      <wsdl:input name="GetKundeByIdAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetKundeByIdAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKunden">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllKunden" style="document" />
+      <wsdl:input name="GetAllKundenAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllKundenAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLagerbestandById">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandById" style="document" />
+      <wsdl:input name="GetLagerbestandByIdAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLagerbestandByIdAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLagerbestandlisten">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllLagerbestandlisten" style="document" />
+      <wsdl:input name="GetAllLagerbestandlistenAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllLagerbestandlistenAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLagerbestandByMaschinenartenId">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandByMaschinenartenId" style="document" />
+      <wsdl:input name="GetLagerbestandByMaschinenartenIdAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLagerbestandByMaschinenartenIdAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLagerbestandVorhanden">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVorhanden" style="document" />
+      <wsdl:input name="GetLagerbestandVorhandenAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLagerbestandVorhandenAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLagerbestandLeer">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandLeer" style="document" />
+      <wsdl:input name="GetLagerbestandLeerAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLagerbestandLeerAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLagerbestandNichtsVermietet">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichtsVermietet" style="document" />
+      <wsdl:input name="GetLagerbestandNichtsVermietetAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLagerbestandNichtsVermietetAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLagerbestandVermietet">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandVermietet" style="document" />
+      <wsdl:input name="GetLagerbestandVermietetAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLagerbestandVermietetAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLagerbestandNichtImPool">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetLagerbestandNichtImPool" style="document" />
+      <wsdl:input name="GetLagerbestandNichtImPoolAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLagerbestandNichtImPoolAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaschinenarteById">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenarteById" style="document" />
+      <wsdl:input name="GetMaschinenarteByIdAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetMaschinenarteByIdAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaschinenarten">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenarten" style="document" />
+      <wsdl:input name="GetAllMaschinenartenAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllMaschinenartenAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaschinenartenIstRentabel">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenIstRentabel" style="document" />
+      <wsdl:input name="GetAllMaschinenartenIstRentabelAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllMaschinenartenIstRentabelAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaschinenartenIstUnrentabel">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenartenIstUnrentabel" style="document" />
+      <wsdl:input name="GetAllMaschinenartenIstUnrentabelAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllMaschinenartenIstUnrentabelAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaschinenkaufById">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetMaschinenkaufById" style="document" />
+      <wsdl:input name="GetMaschinenkaufByIdAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetMaschinenkaufByIdAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaschinenkaufe">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufe" style="document" />
+      <wsdl:input name="GetAllMaschinenkaufeAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllMaschinenkaufeAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaschinenkaufeByMaschinenart">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeByMaschinenart" style="document" />
+      <wsdl:input name="GetAllMaschinenkaufeByMaschinenartAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllMaschinenkaufeByMaschinenartAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaschinenkaufeByDate">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeByDate" style="document" />
+      <wsdl:input name="GetAllMaschinenkaufeByDateAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllMaschinenkaufeByDateAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaschinenkaufeInZeitraum">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllMaschinenkaufeInZeitraum" style="document" />
+      <wsdl:input name="GetAllMaschinenkaufeInZeitraumAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllMaschinenkaufeInZeitraumAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVermietungById">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungById" style="document" />
+      <wsdl:input name="GetVermietungByIdAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetVermietungByIdAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllVermietungen">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetAllVermietungen" style="document" />
+      <wsdl:input name="GetAllVermietungenAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllVermietungenAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVermietungenInZeitraum">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenInZeitraum" style="document" />
+      <wsdl:input name="GetVermietungenInZeitraumAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetVermietungenInZeitraumAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVermietungenAnKunde">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/GetVermietungenAnKunde" style="document" />
+      <wsdl:input name="GetVermietungenAnKundeAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetVermietungenAnKundeAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuerKunde">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerKunde" style="document" />
+      <wsdl:input name="NuerKundeAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NuerKundeAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuerLagerplatz">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NuerLagerplatz" style="document" />
+      <wsdl:input name="NuerLagerplatzAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NuerLagerplatzAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NeueMaschinenart">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueMaschinenart" style="document" />
+      <wsdl:input name="NeueMaschinenartAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NeueMaschinenartAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NeuMaschinenkauf">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeuMaschinenkauf" style="document" />
+      <wsdl:input name="NeuMaschinenkaufAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NeuMaschinenkaufAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NeueVermietungAnKunden">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/NeueVermietungAnKunden" style="document" />
+      <wsdl:input name="NeueVermietungAnKundenAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NeueVermietungAnKundenAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialAnVermietungAnfügen">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/MaterialAnVermietungAnfügen" style="document" />
+      <wsdl:input name="MaterialAnVermietungAnfügenAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MaterialAnVermietungAnfügenAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveKundenSet">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveKundenSet" style="document" />
+      <wsdl:input name="SaveKundenSetAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveKundenSetAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLagerSet">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveLagerSet" style="document" />
+      <wsdl:input name="SaveLagerSetAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveLagerSetAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMaschinenartSet">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenartSet" style="document" />
+      <wsdl:input name="SaveMaschinenartSetAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveMaschinenartSetAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMaschinenkaufe">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveMaschinenkaufe" style="document" />
+      <wsdl:input name="SaveMaschinenkaufeAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveMaschinenkaufeAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveVermitungenSet">
+      <soap:operation soapAction="http://www.Baumaschinenmietservice.de/Services/IMietservice/SaveVermitungenSet" style="document" />
+      <wsdl:input name="SaveVermitungenSetAnfrage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveVermitungenSetAntwort">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IMietservicebbc88403-91f6-46d0-8501-7874e73cd0f1">
+    <wsdl:port name="BasicHttpBinding_IMietservice" binding="tns:BasicHttpBinding_IMietservice">
+      <soap:address location="http://localhost:10352/WcfNinjectBaumaschinenmietService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

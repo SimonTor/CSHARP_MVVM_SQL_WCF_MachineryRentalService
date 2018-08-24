@@ -49,9 +49,9 @@
       <Project>{2da3231c-63e6-4da1-94c0-8f01e6d9ef3c}</Project>
       <Name>Logging.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\CrossCutting\MietmaterialdatenbankKlassen\MietmaterialdatenbankKlassen.csproj">
-      <Project>{66be3ae7-a508-4730-979d-708216e998cb}</Project>
-      <Name>MietmaterialdatenbankKlassen</Name>
+    <ProjectReference Include="..\..\..\CrossCutting\Mietmaschinendatenbank_DataClasses\Mietmaschinendatenbank_DataClasses.csproj">
+      <Project>{2364e52e-6fd6-4938-acd4-087d58fad5c3}</Project>
+      <Name>Mietmaschinendatenbank_DataClasses</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\L2_Datenzugriffsschicht\Mietmaterialdatenbankzugriffsschicht.Contracts\Mietmaterialdatenbankzugriffsschicht.Contracts.csproj">
       <Project>{be23aa33-83a0-4306-b3d1-0b131fda5fd8}</Project>

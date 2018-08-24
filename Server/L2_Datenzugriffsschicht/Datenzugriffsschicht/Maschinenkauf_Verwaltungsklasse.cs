@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 using Server.L2.Mietmaterialdatenbankzugriffsschicht.Contracts;
 
 namespace Server.L2.Mietmaterialdatenbankzugriffsschicht
@@ -191,7 +191,7 @@ namespace Server.L2.Mietmaterialdatenbankzugriffsschicht
                         var abfrage = from Maschinenkauf in modell.MaschinenkauflisteSatz.Include("Maschinenartenliste") select Maschinenkauf;
                         Maschinenkauf current = abfrage.Where(o => o.Maschinenkauf_ID == p.Maschinenkauf_ID).First();
 
-                        Crosscutting.MietmaterialdatenbankKlassen.Maschinenkauf.Clone(p, current);
+                        CrossCutting.Mietmaschinendatenbank_DataClasses.Maschinenkauf.Clone(p, current);
 
                         modell.MaschinenkauflisteSatz.ApplyChanges(current);
 

@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/08/2015 16:19:36
--- Generated from EDMX file: C:\Softwareprojekte\Baumaschinenverleih\Software\CrossCutting\Mietmaschinendatenbank_DataClasses\MietmaschinendatenbankModel.edmx
+-- Date Created: 08/24/2018 20:02:49
+-- Generated from EDMX file: E:\Projekte\Git\CSHARP_MVVM_SQL_WCF_MachineryRentalService\CrossCutting\Mietmaschinendatenbank_DataClasses\MietmaschinendatenbankModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -20,6 +20,9 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_MaschinenartenlisteMaschinenkaufliste]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[MaschinenkauflisteSatz] DROP CONSTRAINT [FK_MaschinenartenlisteMaschinenkaufliste];
 GO
+IF OBJECT_ID(N'[dbo].[FK_KundeVermietung]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[VermietungslisteSatz] DROP CONSTRAINT [FK_KundeVermietung];
+GO
 IF OBJECT_ID(N'[dbo].[FK_VermietungMaschinenart_Vermietung]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VermietungMaschinenart] DROP CONSTRAINT [FK_VermietungMaschinenart_Vermietung];
 GO
@@ -27,10 +30,7 @@ IF OBJECT_ID(N'[dbo].[FK_VermietungMaschinenart_Maschinenart]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VermietungMaschinenart] DROP CONSTRAINT [FK_VermietungMaschinenart_Maschinenart];
 GO
 IF OBJECT_ID(N'[dbo].[FK_MaschinenartLagerbestand]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[MaschinenartenlisteSatz] DROP CONSTRAINT [FK_MaschinenartLagerbestand];
-GO
-IF OBJECT_ID(N'[dbo].[FK_KundeVermietung]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[VermietungslisteSatz] DROP CONSTRAINT [FK_KundeVermietung];
+    ALTER TABLE [dbo].[LagerbestandSatz] DROP CONSTRAINT [FK_MaschinenartLagerbestand];
 GO
 
 -- --------------------------------------------------
@@ -40,9 +40,6 @@ GO
 IF OBJECT_ID(N'[dbo].[MaschinenkauflisteSatz]', 'U') IS NOT NULL
     DROP TABLE [dbo].[MaschinenkauflisteSatz];
 GO
-IF OBJECT_ID(N'[dbo].[LagerbestandSatz]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[LagerbestandSatz];
-GO
 IF OBJECT_ID(N'[dbo].[KundenlisteSatz]', 'U') IS NOT NULL
     DROP TABLE [dbo].[KundenlisteSatz];
 GO
@@ -51,6 +48,9 @@ IF OBJECT_ID(N'[dbo].[VermietungslisteSatz]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[MaschinenartenlisteSatz]', 'U') IS NOT NULL
     DROP TABLE [dbo].[MaschinenartenlisteSatz];
+GO
+IF OBJECT_ID(N'[dbo].[LagerbestandSatz]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LagerbestandSatz];
 GO
 IF OBJECT_ID(N'[dbo].[VermietungMaschinenart]', 'U') IS NOT NULL
     DROP TABLE [dbo].[VermietungMaschinenart];
@@ -68,16 +68,6 @@ CREATE TABLE [dbo].[MaschinenkauflisteSatz] (
     [Rechnungspreis] float  NOT NULL,
     [Kaufdatum] datetime  NOT NULL,
     [Maschinenart_ID] int  NOT NULL
-);
-GO
-
--- Creating table 'LagerbestandSatz'
-CREATE TABLE [dbo].[LagerbestandSatz] (
-    [Lagerbestand_ID] int IDENTITY(1,1) NOT NULL,
-    [Maschinenart_ID] int  NOT NULL,
-    [Gesamtanzahl] int  NOT NULL,
-    [Lagermenge] int  NOT NULL,
-    [VermietetMenge] int  NOT NULL
 );
 GO
 
@@ -107,8 +97,17 @@ CREATE TABLE [dbo].[MaschinenartenlisteSatz] (
     [Vermietfaktor] int  NOT NULL,
     [Tagessatz] float  NOT NULL,
     [Rentabilität] float  NOT NULL,
-    [Maschinenartbezeichnung] nvarchar(max)  NOT NULL,
-    [Lagerbestand_Lagerbestand_ID] int  NOT NULL
+    [Maschinenartbezeichnung] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'LagerbestandSatz'
+CREATE TABLE [dbo].[LagerbestandSatz] (
+    [Lagerbestand_ID] int IDENTITY(1,1) NOT NULL,
+    [Gesamtanzahl] int  NOT NULL,
+    [Lagermenge] int  NOT NULL,
+    [VermietetMenge] int  NOT NULL,
+    [Maschinenart_ID] int  NOT NULL
 );
 GO
 
@@ -129,12 +128,6 @@ ADD CONSTRAINT [PK_MaschinenkauflisteSatz]
     PRIMARY KEY CLUSTERED ([Maschinenkauf_ID] ASC);
 GO
 
--- Creating primary key on [Lagerbestand_ID] in table 'LagerbestandSatz'
-ALTER TABLE [dbo].[LagerbestandSatz]
-ADD CONSTRAINT [PK_LagerbestandSatz]
-    PRIMARY KEY CLUSTERED ([Lagerbestand_ID] ASC);
-GO
-
 -- Creating primary key on [Kunden_ID] in table 'KundenlisteSatz'
 ALTER TABLE [dbo].[KundenlisteSatz]
 ADD CONSTRAINT [PK_KundenlisteSatz]
@@ -151,6 +144,12 @@ GO
 ALTER TABLE [dbo].[MaschinenartenlisteSatz]
 ADD CONSTRAINT [PK_MaschinenartenlisteSatz]
     PRIMARY KEY CLUSTERED ([Maschinenart_ID] ASC);
+GO
+
+-- Creating primary key on [Lagerbestand_ID] in table 'LagerbestandSatz'
+ALTER TABLE [dbo].[LagerbestandSatz]
+ADD CONSTRAINT [PK_LagerbestandSatz]
+    PRIMARY KEY CLUSTERED ([Lagerbestand_ID] ASC);
 GO
 
 -- Creating primary key on [Vermietung_Vermiet_ID], [Maschinenart_Maschinenart_ID] in table 'VermietungMaschinenart'
@@ -177,6 +176,20 @@ ON [dbo].[MaschinenkauflisteSatz]
     ([Maschinenart_ID]);
 GO
 
+-- Creating foreign key on [Kunden_ID] in table 'VermietungslisteSatz'
+ALTER TABLE [dbo].[VermietungslisteSatz]
+ADD CONSTRAINT [FK_KundeVermietung]
+    FOREIGN KEY ([Kunden_ID])
+    REFERENCES [dbo].[KundenlisteSatz]
+        ([Kunden_ID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_KundeVermietung'
+CREATE INDEX [IX_FK_KundeVermietung]
+ON [dbo].[VermietungslisteSatz]
+    ([Kunden_ID]);
+GO
+
 -- Creating foreign key on [Vermietung_Vermiet_ID] in table 'VermietungMaschinenart'
 ALTER TABLE [dbo].[VermietungMaschinenart]
 ADD CONSTRAINT [FK_VermietungMaschinenart_Vermietung]
@@ -200,32 +213,18 @@ ON [dbo].[VermietungMaschinenart]
     ([Maschinenart_Maschinenart_ID]);
 GO
 
--- Creating foreign key on [Lagerbestand_Lagerbestand_ID] in table 'MaschinenartenlisteSatz'
-ALTER TABLE [dbo].[MaschinenartenlisteSatz]
+-- Creating foreign key on [Maschinenart_ID] in table 'LagerbestandSatz'
+ALTER TABLE [dbo].[LagerbestandSatz]
 ADD CONSTRAINT [FK_MaschinenartLagerbestand]
-    FOREIGN KEY ([Lagerbestand_Lagerbestand_ID])
-    REFERENCES [dbo].[LagerbestandSatz]
-        ([Lagerbestand_ID])
+    FOREIGN KEY ([Maschinenart_ID])
+    REFERENCES [dbo].[MaschinenartenlisteSatz]
+        ([Maschinenart_ID])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_MaschinenartLagerbestand'
 CREATE INDEX [IX_FK_MaschinenartLagerbestand]
-ON [dbo].[MaschinenartenlisteSatz]
-    ([Lagerbestand_Lagerbestand_ID]);
-GO
-
--- Creating foreign key on [Kunden_ID] in table 'VermietungslisteSatz'
-ALTER TABLE [dbo].[VermietungslisteSatz]
-ADD CONSTRAINT [FK_KundeVermietung]
-    FOREIGN KEY ([Kunden_ID])
-    REFERENCES [dbo].[KundenlisteSatz]
-        ([Kunden_ID])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_KundeVermietung'
-CREATE INDEX [IX_FK_KundeVermietung]
-ON [dbo].[VermietungslisteSatz]
-    ([Kunden_ID]);
+ON [dbo].[LagerbestandSatz]
+    ([Maschinenart_ID]);
 GO
 
 -- --------------------------------------------------

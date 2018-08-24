@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Crosscutting.Logging.Contracts;
-using Crosscutting.MietmaterialdatenbankKlassen;
+using CrossCutting.Mietmaschinendatenbank_DataClasses;
 using Server.L2.Mietmaterialdatenbankzugriffsschicht.Contracts;
 
 namespace Server.L3.Logikschicht.Contracts

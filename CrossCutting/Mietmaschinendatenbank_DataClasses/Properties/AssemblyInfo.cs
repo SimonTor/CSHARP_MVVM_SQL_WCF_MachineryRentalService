@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Mietmaschinendatenbank_Geschäftsobjekt")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Berner & Mattner Systemtechnik GmbH;")]
+[assembly: AssemblyCompany("Musicmenproductions GbR;")]
 [assembly: AssemblyProduct("Mietmaschinendatenbank_Geschäftsobjekt")]
-[assembly: AssemblyCopyright("Copyright © Berner & Mattner Systemtechnik GmbH; 2015")]
+[assembly: AssemblyCopyright("Copyright © Musicmenproductions GbR; 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

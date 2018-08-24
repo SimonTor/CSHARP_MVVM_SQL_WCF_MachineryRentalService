@@ -1,7 +1,6 @@
 using GalaSoft.MvvmLight;
 using MVVM.Commands;
 using System.ComponentModel;
-using Crosscutting.MietmaterialdatenbankKlassen;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
@@ -9,6 +8,7 @@ using System;
 using mvvmClient.Model;
 using mvvmClient.Commands;
 using System.Windows;
+using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
 
 namespace mvvmClient.ViewModel
 {
