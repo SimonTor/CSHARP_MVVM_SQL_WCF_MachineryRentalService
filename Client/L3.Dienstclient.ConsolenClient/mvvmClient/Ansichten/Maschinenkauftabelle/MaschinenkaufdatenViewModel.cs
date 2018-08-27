@@ -6,6 +6,10 @@ using System.Windows.Media;
 using mvvmClient.Model;
 using mvvmClient.Commands;
 using Mietmaschienenservice_Dienstproxy.Client.L2.Proxy.ClientProxy;
+using System.Windows.Controls;
+using System.Windows.Input;
+using GalaSoft.MvvmLight.Command;
+using System.Windows;
 
 namespace mvvmClient.Ansichten
 {
@@ -91,12 +95,28 @@ namespace mvvmClient.Ansichten
             OnPropertyChanged("Maschinenkauf");
         }
 
+        //-----------------
+
         ///  ########################### Daten (Properties) ###########################################
         ObservableCollection<Maschinenkauf> maschinenkauf;
         public ObservableCollection<Maschinenkauf> Maschinenkauf // Liste der Orte für Abflug- und Zielauswahl
         {
             get { return maschinenkauf; }
-            set { maschinenkauf = value; OnPropertyChanged("Maschinenkauf"); }
+            set { 
+                    maschinenkauf = value; 
+                    OnPropertyChanged("Maschinenkauf"); 
+                }
+        }
+
+        ObservableCollection<Maschinenart> maschinenart;
+        public ObservableCollection<Maschinenart> Maschinenart // Liste der Orte für Abflug- und Zielauswahl
+        {
+            get { return maschinenart; }
+            set
+            {
+                maschinenart = value;
+                OnPropertyChanged("Maschinenart");
+            }
         }
 
         //-----------------
@@ -109,6 +129,81 @@ namespace mvvmClient.Ansichten
             {
                 currentMaschinenkauf = value;
                 OnPropertyChanged("CurrentMaschinenkauf"); //INotifyPropertyChange
+                locked = false;
+            }
+        }
+
+        //-----------------
+
+        ObservableCollection<int> maschinenartenIDs;
+        public ObservableCollection<int> MaschinenartenIDs // Liste der Orte für Abflug- und Zielauswahl
+        {
+            get { return maschinenartenIDs; }
+            set
+            {
+                maschinenartenIDs = value;
+                OnPropertyChanged("MaschinenartenIDs"); 
+            }
+        }
+
+        ObservableCollection<string> maschinenartenBezeichnung;
+        public ObservableCollection<string> MaschinenartenBezeichnung // Liste der Orte für Abflug- und Zielauswahl
+        {
+            get { return maschinenartenBezeichnung; }
+            set
+            {
+                maschinenartenBezeichnung = value;
+                OnPropertyChanged("MaschinenartenBezeichnung");
+            }
+        }
+
+        private string currentMaschinenartenBezeichnung;
+        public string CurrentMaschinenartenBezeichnung
+        {
+            get { return currentMaschinenartenBezeichnung; }
+            set
+            {
+                currentMaschinenartenBezeichnung = value;
+
+                //After change a Maschine the MaschinID in the corresponding (currentMaschinenkauf) must also be updatet according to this number
+                //Find number coresponding to Bezeichner
+
+                int ID = 0;
+                foreach (Maschinenart temp in Maschinenart)
+                {
+                    if (temp.Maschinenartbezeichnung == currentMaschinenartenBezeichnung)
+                    {
+                        ID = temp.Maschinenart_ID;
+                        break;
+                    }
+                }
+                CurrentMaschinenkauf.Maschinenart_ID = ID;
+
+                OnPropertyChanged("CurrentMaschinenartenBezeichnung"); //INotifyPropertyChange
+                locked = false;
+            }
+        }
+
+        ///  ####################### gebundene Funktionen ######################################
+
+        private bool locked = false;
+
+        public void UpdateAllEndpreises()
+        {            
+            if (Maschinenkauf != null && locked == false)
+            {
+                foreach (Maschinenkauf _maschinenkauf in Maschinenkauf)
+                {
+                    if (_maschinenkauf != null)
+                    {
+                        if (_maschinenkauf.Anzahl > 0 && _maschinenkauf.Einzelpreis > 0)
+                        {
+                            _maschinenkauf.Rechnungspreis = _maschinenkauf.Anzahl * _maschinenkauf.Einzelpreis;
+                            locked = true;
+                            OnPropertyChanged("Maschinenkauf");
+                        }
+                    }
+                }
             }
         }
 
@@ -124,10 +219,15 @@ namespace mvvmClient.Ansichten
             AddCommand = new ActionCommand(Add);
             SaveCommand = new ActionCommand(Save);
             DeleteCommand = new ActionCommand(Delete);
+           
 
             DataService client = new DataService();
             Maschinenkauf = client.GetAllMaschinenkaufe();
-            client.Close();            
+            Maschinenart = client.GetAllMaschinenarten();
+
+            MaschinenartenIDs = new ObservableCollection<int>(client.GetAllMaschinenarten().Select(p => p.Maschinenart_ID));
+            MaschinenartenBezeichnung = new ObservableCollection<string>(client.GetAllMaschinenarten().Select(p => p.Maschinenartbezeichnung));
+            client.Close();
         }
 
 
@@ -141,6 +241,7 @@ namespace mvvmClient.Ansichten
         {
             if (PropertyChanged != null)
             {
+                UpdateAllEndpreises();
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
